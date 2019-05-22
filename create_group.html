@@ -1,54 +1,86 @@
 <html>
 	<header>
 		<title>User Name</title>
-		<link rel="stylesheet" type="text/css" href="Tarrie.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:extra-light&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:light|Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="create_group.css"/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+       <script src="create_group.js"></script>
 	</header>
 	<body>
 		<div id="screen">
 			<div id="smaller-screen">
-				<div id="back-arrow"><!-- Back arrow to get back to Manage Group page-->
-				</div>
-				<div class="head-bar"> <!-- This is the title of the Create Group page-->	<h1><i>Tarrie</i></h1>
-				</div>
-				<div class="head-bar-decor">
 
+				<!--Container to hold the two buttons for creating a group and creating event -->
+				<div id="group-event-header">
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
+						<div id="group-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name"> Create Group</span>
+						</div>
+					</a>
+
+
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')">
+						<div id="event-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name">Create Event</span>
+						</div>
+					</a>
 				</div>
-				<div class="avatar"> <!-- Avatar and image for the group insert here -->
+
+				<div class="groups-body">
+					 <h1 class="group-event-header-txt">Groups</h1>
+					 <div class="group-class-options"> 
+					 	<span class="category" id="all_groups" onClick="setCategory('all_groups')">All Groups</span>
+					 	<span class="category" id="owner_admin" onClick="setCategory('owner_admin')">Owner+Admin</span>
+					 	<span class="category"  id="following" onClick="setCategory('following')">Following</span>
+					 </div>
+
+					 <div class="group-event-searchbar">
+					 	<ion-icon name="search"></ion-icon>
+					 	<span class="search"> Search ... </span>
+					 </div>
 				</div>
-				<div class="text-box">
-					<form>
-						<fieldset>
-							<legend>Create a New Group!</legend>
-							Group Name:<br>
-							<input type="text" name="Groupname"><br>
-							Details:<br>
-							<input type="text"><br><br>
-							<!--<input type="submit" value="Create">-->
-						</fieldset>
-					</form>
+
+
+
+				<div class="event-body">
+					 <h1 class="group-event-header-txt">Upcoming Events</h1>
+					 <div class="group-class-options"> 
+					 	<span class="category" id="all_events" onClick="setCategory('all_events')">All Events</span>
+					 	<span class="category" id="hosting" onClick="setCategory('hosting')">Hosting</span>
+					 	<span class="category" id="rsvp" onClick="setCategory('rsvp')">Rsvp'd</span>
+					 	<span class="category" id="saved" onClick="setCategory('saved')">Saved</span>
+					 </div>
+
+					 <div class="event-strip">
+						 <div class="group-event-searchbar">
+						 	<ion-icon name="search"></ion-icon>
+						 	<span class="search"> Search ... </span>
+						 </div>
+						 <div class="event-calender"  onmousedown="calender_down()" onmouseup="calender_up()">
+					 		<ion-icon id="calender-icon" onmousedown="calender_down()" name="calendar"></ion-icon>
+					 		<span class="calendar-txt"> View Calendar</span>
+					 	</div>
+					 </div>
 				</div>
-				<div class="avatar-name">
-					Avatar
-				</div>
-				<button class="org-button">Organize</button><br>
-				<div class="events"> 
-					Events 
-				</div>
-				<div class="events-list">
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-				</div>
-				<button id="create-button" onclick="create()">Create Group</button>
+
 			</div>
 		</div>
+
+
 	<script>
 		function create() {
 			document.getElementById("create-button").style.backgroundColor = white;
 			document.getEleementById("create-button").style.color = "#0B610B";
 		}
+		initCategories();
 	</script>
+
+
+	<!--Adds some open script icons from ionic -->
+	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	</body>
 </html>
