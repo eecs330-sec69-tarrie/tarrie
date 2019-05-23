@@ -1,54 +1,201 @@
 <html>
 	<header>
 		<title>User Name</title>
-		<link rel="stylesheet" type="text/css" href="Tarrie.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:extra-light&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:light, semi-bold,bold,regular+italic|Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="create_group.css"/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+       <script src="create_group.js"></script>
 	</header>
 	<body>
 		<div id="screen">
 			<div id="smaller-screen">
-				<div id="back-arrow"><!-- Back arrow to get back to Manage Group page-->
+				<div id="head-bar">
+					<div class="name">
+						<b>Tarrie</b>
+					</div>
+					<div class="material-icons" class="options" style="display:inline-block;float:right;height:50px;width:7%;font-size:40px;">menu</div>
+					<div class="avatar">
+					</div>
+					<div style="font-size:30px;text-align:left;">
+						<i>Jide Anene</i>
+					</div>
+					<div style="font-size: 10px;text-align:left;">
+						10 posted events &#8226; following 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
+					</div>
+					<hr style="margin-left:10%;margin-right:10%;">
+					<div style="text-align:left;font-family:Montserrat;">
+						Email:<br>
+						Jideanene2020@u.northwestern.edu
+					</div>
+					<!--<div style="display:inline;text-align:left;float:left;border:1px solid red;">
+						Handle<br>
+						jide_anene
+					</div>-->
+					<div id="edit/profile" style="display:inline-block;float:left;margin-left:35px;">
+						Edit Profile
+					</div>
 				</div>
-				<div class="head-bar"> <!-- This is the title of the Create Group page-->	<h1><i>Tarrie</i></h1>
+				<!--Container to hold the button for creating a group  -->
+				<div id="group-event-header">
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
+						<div id="group-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name"> Create Group</span>
+						</div>
+					</a>
+
+				<!--Container to hold the button for creating a event  -->
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')">
+						<div id="event-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name">Create Event</span>
+						</div>
+					</a>
 				</div>
-				<div class="head-bar-decor">
+
+				<!--Container to hold body for scrollanble group cards  -->
+				<div class="groups-body">
+					<div class="group-event-header">
+						 <!--Text and clickable options that are underlined w/ green -->
+						 <h1 class="group-event-header-txt">Groups</h1>
+						 <div class="group-class-options"> 
+						 	<span class="category" id="all_groups" onClick="setCategory('all_groups')">All</span>
+						 	<span class="category" id="owner_admin" onClick="setCategory('owner_admin')">Owner+Admin</span>
+						 	<span class="category"  id="favorites" onClick="setCategory('favorites')">Favorities</span>
+						 	<span class="category"  id="following" onClick="setCategory('following')">Following</span>
+						 </div>
+
+						  <!--Search bar -->
+						 <div class="group-search">
+							 <div class="group-event-searchbar">
+							 	<ion-icon name="search"></ion-icon>
+							 	<span class="search"> Search ... </span>
+							 </div>
+						</div>
+					</div>
+
+					 <!--Container to holds the group cards  -->
+					 <div class="group-card-holder">
+					 	
+					 	<div id="devClub_nu" class="group-card">
+					 		<!--Header of a group card-->
+						 	<div class="group-header">
+						 		<div class ="profile-pic-small">
+									<img src = "./images/devclub.png">
+								</div>
+
+								<div class = "group-txt-info">
+									<div class="group-handle">
+										devClub_nu
+									</div>
+									<div class="group-txt-footer">
+										<div class="group-desc">
+											Northwestern's Software Development Club
+										</div>
+										<div class="group-loc">
+											<span class>
+												Evanston &#183; IL  &#183; USA
+											</span>
+										</div>	
+									</div>
+								</div>
+
+								<div class="priviledge-lvl">
+									<div id="owner-icon">
+										<img src="./images/owner.png" alt="owner">
+									</div>	
+									Owner
+								</div>
+
+						 	</div>
+						 	<!--footer of a group card-->
+							<div class="group-footer">
+						    	<a href="#" style="color:inherit;" onmousedown="click_down('manager',true)" onmouseup="click_up('manager',true)">
+							    	<div class="manager" id="manager" style="display: inline-block;">
+							    		Manage
+							    		<div class="alerts" style="display: inline-block;">
+							    			3
+							    		</div>
+							    	</div>
+						    	</a>
+
+								<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+							    	<div class="chat" id="chat" style="display: inline-block;">
+							    		Chat
+							    		<div class="alerts" style="display: inline-block;">
+							    			2
+							    		</div>
+							    	</div>
+							    </a>
+							</div>
+
+					 	</div>
+
+
+
+
+					 </div>
+				</div>
+
+
+
+				<div class="event-body">
+
+					<div class="group-event-header">
+						<!--Text and clickable options that are underlined w/ green -->
+						 <h1 class="group-event-header-txt">Upcoming Events</h1>
+						 <div class="group-class-options"> 
+						 	<span class="category" id="all_events" onClick="setCategory('all_events')">All</span>
+						 	<span class="category" id="hosting" onClick="setCategory('hosting')">Hosting</span>
+						 	<span class="category" id="rsvp" onClick="setCategory('rsvp')">Rsvp'd</span>
+						 	<span class="category" id="saved" onClick="setCategory('saved')">Saved</span>
+						 </div>
+
+						  <!--Search bar and calender icon  -->
+						 <div class="event-strip">
+							 <div class="group-event-searchbar">
+							 	<ion-icon name="search"></ion-icon>
+							 	<span class="search"> Search ... </span>
+							 </div>
+
+							 <a href="calendar.html" style="color:inherit;">
+								 <div class="event-calender"  onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')">
+							 		<ion-icon id="calender-icon" onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')" name="calendar"></ion-icon>
+							 		<span class="calendar-txt"> View Calendar</span>
+							 	</div>
+						 	</a>
+						 </div> 
+					 </div>
+
+
 
 				</div>
-				<div class="avatar"> <!-- Avatar and image for the group insert here -->
+
+				<!--
+				<div id="owner-icon">
+					<img src="./images/owner.png" alt="owner">
 				</div>
-				<div class="text-box">
-					<form>
-						<fieldset>
-							<legend>Create a New Group!</legend>
-							Group Name:<br>
-							<input type="text" name="Groupname"><br>
-							Details:<br>
-							<input type="text"><br><br>
-							<!--<input type="submit" value="Create">-->
-						</fieldset>
-					</form>
-				</div>
-				<div class="avatar-name">
-					Avatar
-				</div>
-				<button class="org-button">Organize</button><br>
-				<div class="events"> 
-					Events 
-				</div>
-				<div class="events-list">
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-					<button class="add-button"><i class="material-icons">add_circle</i></button>
-				</div>
-				<button id="create-button" onclick="create()">Create Group</button>
+
+				<div id="admin-icon">
+					<img src="./images/admin.png" alt="admin">
+				</div>-->
+
 			</div>
 		</div>
+
+
 	<script>
 		function create() {
 			document.getElementById("create-button").style.backgroundColor = white;
 			document.getEleementById("create-button").style.color = "#0B610B";
 		}
+		initCategories();
 	</script>
+
+
+	<!--Adds some open script icons from ionic -->
+	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	</body>
 </html>
