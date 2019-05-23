@@ -6,7 +6,7 @@ body {font-family: Verdana, sans-serif;}
 .month {
   padding: 70px 25px;
   width: 100%;
-  background: #1abc9c;
+  background-image: url("./images/forestbridge.jpg");
   text-align: center;
 }
 
@@ -63,7 +63,7 @@ body {font-family: Verdana, sans-serif;}
 
 .days li .active {
   padding: 5px;
-  background: #1abc9c;
+  background: #1e824c;
   color: white !important
 }
 

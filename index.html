@@ -1,232 +1,219 @@
-<!DOCTYPE html>
-
 <html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/w3.css">
-<link rel="stylesheet" href="css/extras.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body>
+	<header>
+		<title>Tarri&#x0113; | Manager</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:extra-light,light&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:light, semi-bold,bold,regular+italic|Montserrat:light,thin,regular&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="dashboard.css"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+       <script src="dashboard.js"></script>
+	</header>
+	<body>
+		<div id="screen">
+				<div class="head-top"> 
+					<div class="name">
+						<b>Tarri&#x0113;</b>
+					</div>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-    <a href="page2.html" class="w3-bar-item w3-button w3-hide-small">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button w3-hide-small">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button w3-hide-small">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
+					<div class="menu-option" style="float:right;display:inline-block">
+						<ion-icon name="menu"></ion-icon>
+					</div>
+				</div>
+			
+				<div id="head-bar">
 
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="page2.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 2</a>
-    <a href="page3.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 3</a>
-    <a href="page4.html" class="w3-bar-item w3-button" onclick="toggleFunction()">PAGE 4</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
-  </div>
-</div>
+					<div class="avatar">
+						<img src="./images/avatar_hat.jpg" alt="owner">
+					</div>
+					<div id="user-name" style="text-align:left;">
+						<i>Becky Tousilienie</i>
+					</div>
+					<div style="font-size: 10px;text-align:left;">
+						10 posted events &#8226; following 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
+					</div>
+					<hr style="margin-left:10%;margin-right:10%;">
+					
+					<span class="email-header"> email</span>
+					<span class="handle-header"> handle</span>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
-  </div>
-</div>
+					<div class="user-identifiers">
+						<span class="user-email">beckytousilienie2021@u.northwestern.edu</span>
+						<span class="user-handle">becky_t_95</span>
+					</div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
 
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
 
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
+					
+					<!--<div style="display:inline;text-align:left;float:left;border:1px solid red;">
+						Handle<br>
+						jide_anene
+					</div>-->
+					<div id="edit-profile" style="display:inline-block">
+						Edit Profile
+					</div>
+				</div>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
-  </div>
-</div>
+			<div id="smaller-screen">
 
-<!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are some of my latest lorem work ipsum tipsum.<br> Click on the images to make them bigger</em></p><br>
+				<!--Container to hold the button for creating a group  -->
+				<div id="group-event-header">
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
+						<div id="group-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name"> Create Group</span>
+						</div>
+					</a>
 
-  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="w3-col m3">
-      <img src="images/p1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
-    </div>
+				<!--Container to hold the button for creating a event  -->
+					<a id="group-event-button" href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')">
+						<div id="event-button-format" class="create-group-event">
+							<ion-icon name="add"></ion-icon>
+							<span class="group-event-name">Create Event</span>
+						</div>
+					</a>
+				</div>
 
-    <div class="w3-col m3">
-      <img src="images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
-    </div>
+				<!--Container to hold body for scrollanble group cards  -->
+				<div class="groups-body">
+					<div class="group-event-header">
+						 <!--Text and clickable options that are underlined w/ green -->
+						 <h1 class="group-event-header-txt">Groups</h1>
+						 <div class="group-class-options"> 
+						 	<span class="category" id="all_groups" onClick="setCategory('all_groups')">All</span>
+						 	<span class="category" id="owner_admin" onClick="setCategory('owner_admin')">Owner+Admin</span>
+						 	<span class="category"  id="favorites" onClick="setCategory('favorites')">Favorities</span>
+						 	<span class="category"  id="following" onClick="setCategory('following')">Following</span>
+						 </div>
 
-    <div class="w3-col m3">
-      <img src="images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
-    </div>
+						  <!--Search bar -->
+						 <div class="group-search">
+							 <div class="group-event-searchbar">
+							 	<ion-icon name="search"></ion-icon>
+							 	<span class="search"> Search ... </span>
+							 </div>
+						</div>
+					</div>
 
-    <div class="w3-col m3">
-      <img src="images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
-    </div>
-  </div>
+					 <!--Container to holds the group cards  -->
+					 <div class="group-card-holder">
+					 	
+					 	<div id="devClub_nu" class="group-card">
+					 		<!--Header of a group card-->
+						 	<div class="group-header">
+						 		<div class ="profile-pic-small">
+									<img src = "./images/devclub.png">
+								</div>
 
-  <div class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
-    </div>
+								<div class = "group-txt-info">
+									<div class="group-handle">
+										devClub_nu
+									</div>
+									<div class="group-txt-footer">
+										<div class="group-desc">
+											Northwestern's Software Development Club
+										</div>
+										<div class="group-loc">
+											<span class>
+												Evanston &#183; IL  &#183; USA
+											</span>
+										</div>	
+									</div>
+								</div>
 
-    <div class="w3-col m3">
-      <img src="images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
-    </div>
+								<div class="priviledge-lvl">
+									<div id="owner-icon">
+										<img src="./images/owner.png" alt="owner">
+									</div>	
+									Owner
+								</div>
 
-    <div class="w3-col m3">
-      <img src="images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
-    </div>
+						 	</div>
+						 	<!--footer of a group card-->
+							<div class="group-footer">
+						    	<a href="#" style="color:inherit;" onmousedown="click_down('manager',true)" onmouseup="click_up('manager',true)">
+							    	<div class="manager" id="manager" style="display: inline-block;">
+							    		Manage
+							    		<div class="alerts" style="display: inline-block;">
+							    			3
+							    		</div>
+							    	</div>
+						    	</a>
 
-    <div class="w3-col m3">
-      <img src="images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
-  </div>
-</div>
+								<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+							    	<div class="chat" id="chat" style="display: inline-block;">
+							    		Chat
+							    		<div class="alerts" style="display: inline-block;">
+							    			2
+							    		</div>
+							    	</div>
+							    </a>
+							</div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
+					 	</div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
 
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
 
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+					 </div>
+				</div>
 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
 
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
+				<div class="event-body">
 
-</body>
+					<div class="group-event-header">
+						<!--Text and clickable options that are underlined w/ green -->
+						 <h1 class="group-event-header-txt">Upcoming Events</h1>
+						 <div class="group-class-options"> 
+						 	<span class="category" id="all_events" onClick="setCategory('all_events')">All</span>
+						 	<span class="category" id="hosting" onClick="setCategory('hosting')">Hosting</span>
+						 	<span class="category" id="rsvp" onClick="setCategory('rsvp')">Rsvp'd</span>
+						 	<span class="category" id="saved" onClick="setCategory('saved')">Saved</span>
+						 </div>
+
+						  <!--Search bar and calender icon  -->
+						 <div class="event-strip">
+							 <div class="group-event-searchbar">
+							 	<ion-icon name="search"></ion-icon>
+							 	<span class="search"> Search ... </span>
+							 </div>
+
+							 <a href="calendar.html" style="color:inherit;">
+								 <div class="event-calender"  onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')">
+							 		<ion-icon id="calender-icon" onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')" name="calendar"></ion-icon>
+							 		<span class="calendar-txt"> View Calendar</span>
+							 	</div>
+						 	</a>
+						 </div> 
+					 </div>
+
+
+
+				</div>
+
+				<!--
+				<div id="owner-icon">
+					<img src="./images/owner.png" alt="owner">
+				</div>
+
+				<div id="admin-icon">
+					<img src="./images/admin.png" alt="admin">
+				</div>-->
+
+			</div>
+		</div>
+
+
+	<script>
+		function create() {
+			document.getElementById("create-button").style.backgroundColor = white;
+			document.getEleementById("create-button").style.color = "#0B610B";
+		}
+		initCategories();
+	</script>
+
+
+	<!--Adds some open script icons from ionic -->
+	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+	</body>
 </html>
