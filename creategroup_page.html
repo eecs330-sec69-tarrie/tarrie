@@ -1,0 +1,54 @@
+<html>
+	<header>
+		<title style="font-family:Montserrat;">Tarrie</title>
+		<link rel="stylesheet" type="text/css" href="Tarrie.css"/>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+	</header>
+	<body>
+		<div id="screen">
+			<div id="smaller-screen">
+				<div id="back-arrow"><!-- Back arrow to get back to Manage Group page-->
+				</div>
+				<div class="head-bar"> <!-- This is the title of the Create Group page-->	<h1><i>Tarrie</i></h1>
+				</div>
+				<div class="head-bar-decor">
+
+				</div>
+				<div class="avatar"> <!-- Avatar and image for the group insert here -->
+				</div>
+				<div class="text-box">
+					<form>
+						<fieldset>
+							<legend>Create a New Group!</legend>
+							Group Name:<br>
+							<input type="text" name="Groupname"><br>
+							Details:<br>
+							<input type="text"><br><br>
+							<!--<input type="submit" value="Create">-->
+						</fieldset>
+					</form>
+				</div>
+				<div class="avatar-name">
+					Avatar
+				</div>
+				<button class="org-button">Organize</button><br>
+				<div class="events"> 
+					Events 
+				</div>
+				<div class="events-list">
+					<button class="add-button"><i class="material-icons">add_circle</i></button>
+					<button class="add-button"><i class="material-icons">add_circle</i></button>
+					<button class="add-button"><i class="material-icons">add_circle</i></button>
+				</div>
+				<button id="create-button" onclick="create()">Create Group</button>
+			</div>
+		</div>
+	<script>
+		function create() {
+			document.getElementById("create-button").style.backgroundColor = white;
+			document.getEleementById("create-button").style.color = "#0B610B";
+		}
+	</script>
+	</body>
+</html>
