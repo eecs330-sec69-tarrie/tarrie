@@ -4,6 +4,227 @@ body {
 	font-family: Palatino, sans-serif;
 }
 
+
+/** The Group and Event Button */
+#group-event-button {
+	color:black;
+}
+
+.create-group-event ion-icon {
+  vertical-align: middle;
+  	padding-left: .75em;
+	padding: 0px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	margin-left: 60px;
+	color: #1e824c
+  }
+
+
+#group-button-format{
+	/*Rounded Corners*/
+	margin-top: 10px;
+
+	border-radius: 80px 80px 80px 80px;
+	/*border: 0.5px solid rgba(136,136,136,0.50);*/
+	padding-bottom: 20px; 
+	padding-top: 5px; 
+	width: 40%;
+	height: 8%;
+	display:inline-block;
+	margin-left: 30px;
+	margin-right: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+
+	box-shadow: 1px 1px 3px 1px rgba(136,136,136,0.75); 
+}
+
+
+#event-button-format{
+	/*Rounded Corners*/
+	margin-top: 10px;
+
+	border-radius: 80px 80px 80px 80px;
+	/*border: 0.5px solid rgba(136,136,136,0.50);*/
+	padding-bottom: 20px; 
+	padding-top: 5px; 
+	width: 40%;
+	height: 8%;
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-shadow: 1px 1px 3px 1px rgba(136,136,136,0.75); 
+
+}
+
+.group-event-name{
+	width:40%;
+	font-size: 30px;
+	font-family: 'Source Sans Pro', sans-serif;
+	vertical-align: middle;
+  	padding-left: .75em;
+  	padding-right: .75em;
+  	letter-spacing: 0.05em;
+}
+
+
+ /***********HEADER FOR THE CARDS***************/
+.groups-body{
+	/*Rounded Corners*/
+	margin-top: 40px;
+
+	border-radius: 2px 2px 2px 2px;
+	border: 0.5px solid rgba(136,136,136,0.50);
+	padding-bottom: 20px; 
+	padding-top: 0px; 
+	width: 40%;
+	/*height: 8%;*/
+	display:inline-block;
+	margin-left: 30px;
+	margin-right: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+
+.event-body{
+	/*Rounded Corners*/
+	margin-top: 40px;
+
+	border-radius: 2px 2px 2px 2px;
+	border: 0.5px solid rgba(136,136,136,0.50);
+	padding-bottom: 20px; 
+	padding-top: 0px; 
+	width: 40%;
+	/*height: 8%;*/
+	display:inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.group-event-header-txt{
+	margin-top: 0px;
+	padding-top: 5px;
+	text-align: center; 
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.05em;
+	padding-bottom: 0px; 
+	margin-bottom: .25em;
+}
+
+
+.group-event-header{
+	display:inline-block;
+	vertical-align: middle;
+
+}
+
+
+.group-class-options{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	padding-top: 0px; 
+	margin-top: 0px;
+	margin-bottom: 1em;
+}
+
+.category{
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+/***************************** Search Bar *******************************/
+
+
+.group-event-searchbar{
+	background-color: rgba(144, 165, 169, .2); 
+	width: 60%;
+	height: 1.5em;
+  	border-radius: 3px 3px 3px 3px;
+	border: 0.5px solid rgba(136,136,136,0.50);
+	vertical-align: middle;
+	margin-left: 5px; 
+	padding-left: 0;
+	display:inline-block;
+	margin-top: 5px
+}
+
+.group-event-searchbar ion-icon{
+  	vertical-align: middle;
+  	padding-left: 1px;
+	width: 1em;
+	height: 1em;
+	line-height: 50px;
+	margin-left: 10px;
+	padding-top: 2px;
+	/*color: rgba(30,130,76, .75);*/
+	color:rgba(136,136,136, 1);
+	text-align: left;
+	display:inline-block;
+  }
+
+.search{
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+	color:rgba(136,136,136, 1);
+	vertical-align: middle;
+	padding-top: 3px;
+	display:inline-block;
+}
+
+
+/******* Event Calender *********/
+.event-stripe{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+}
+.event-calender{
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+.event-calender ion-icon{
+	width: 1em;
+	height: 1em;
+	line-height: 50px;
+	vertical-align: middle;
+	font-size: 40px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	color: #1e824c;
+  }
+
+.calendar-txt{
+	font-family: 'Montserrat', sans-serif;
+	font-size: .75em;
+	cursor: pointer;
+	letter-spacing: 0.05em;
+}
+
+/*
+#owner_admin{
+	border-bottom: 2px solid; 
+	border-bottom-color: #1e824c;
+}*/
+
+/*******************************/
+
+#button-create{
+	/*Rounded Corners*/
+	border-radius: 25px;
+	border: 2px solid rgb(241,241,241);
+	padding: 20px; 
+	width: 40%;
+	height: 100%;
+}
+
+
 #screen {
 	display: block;
 	margin-right: auto;
@@ -20,18 +241,33 @@ body {
 	background-color: white;
 	width: 97%;
 	height: 90%;
+	/*padding-top: 50px;*/
 }
 
-.head-bar {
+#head-bar {
 	display: block;
 	color: white;
 	background-color: #0B610B;
-	height: 15%;
+	height: 30%;
 	width: 100%;
 	font-size: 20px;
 	text-align: center;
 	padding-top: auto;
 	padding-bottom: auto;
+}
+
+.name {
+	display:inline-block;
+	font-size: 30px;
+	font-family: Montserrat;
+	text-align: left;
+	width: 90%;
+}
+
+.options {
+	display: block;
+	float: right;
+	border: 1px red solid;
 }
 
 /*.head-bar-decor {
@@ -45,12 +281,14 @@ body {
 	display: inline-block;
 	background-color: #CEF6D8;
 	float: left;
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	border-radius: 100%;
-	margin-left: 50px;
-	margin-top: 50px;
+	/*margin-left: 50px;
+	margin-top: 50px;*/
 	border: 1px solid #0B610B;
+	margin-right:30px;
+	margin-left:30px;
 }
 
 .avatar-name {
