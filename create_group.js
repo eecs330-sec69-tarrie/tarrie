@@ -17,7 +17,7 @@ function group_event_button_up(group_event){
 	}
 }
 /****************These Funtions are to underline the categories for group/events**********************/
-group_categories =["all_groups", "owner_admin",  "following"]
+group_categories =["all_groups", "owner_admin",  "following", "favorites"]
 event_categories =["all_events", "hosting", "rsvp", "saved"]
 var curr_group_category = null; 
 var curr_event_category = null; 
@@ -56,18 +56,28 @@ function initCategories(){
 
 
 /*************** Calender Reaction*********************/
-function calender_down(){
-	var cal = document.getElementById("calender-icon");
+function click_down(id, reverse=false){
+	if (reverse==true) {
+		var cal = document.getElementById(id);
+		cal.style.color = "#1e824c";
+		return;
+	}
+	var cal = document.getElementById(id);
 	cal.style.color = "#696969";
 }
 
 
-
-function calender_up(){
-	var cal = document.getElementById("calender-icon");
+function click_up(id, reverse=false){
+	if (reverse==true) {
+		var cal = document.getElementById(id);
+		cal.style.color = "#696969";
+		return;
+	}
+	var cal = document.getElementById(id);
 	cal.style.color = "#1e824c";
 
 }
+
 
 
 
