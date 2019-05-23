@@ -1,0 +1,584 @@
+body {
+	/*background-image: url("images/iphoneOL.jpg");*/
+	font-family: Palatino, sans-serif;
+	font-size:1.3vw;
+
+
+}
+
+
+/** The Group and Event Button */
+#group-event-button {
+	color:black;
+}
+
+.create-group-event ion-icon {
+  vertical-align: middle;
+  	padding-left: .75em;
+	padding: 0;
+	width: 20%;
+	height: 130%;
+	margin-left: 10%;
+	color: #1e824c; 
+  }
+
+
+#group-button-format{
+	/*Rounded Corners*/
+
+	border-radius: 4em;
+	/*border: 0.5px solid rgba(136,136,136,0.50);*/
+	padding-bottom: 1.2em; 
+
+	padding-top: .4em; 
+	width: 40%;
+	height: 8%;
+	display:inline-block;
+	margin-left: 2em;
+	margin-right: 4em;
+	padding-left: 1.1em;
+	padding-right: 1.1em;
+
+	text-shadow: .04em .04em  rgba(136,136,136,0.75); 
+	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+}
+
+
+#event-button-format{
+	/*Rounded Corners*/
+	margin-top: 1em;
+
+	border-radius: 4em;
+	/*border: 0.5px solid rgba(136,136,136,0.50);*/
+	padding-bottom: 1.2em; 
+
+	padding-top: .4em; 
+	width: 40%;
+	height: 8%;
+	display:inline-block;
+	padding-left: 1em;
+	margin-right: 4em;
+	padding-right: 1.1em;
+	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+	text-shadow: .04em .04em rgba(136,136,136,0.75); 
+
+}
+
+.group-event-name{
+	width:40%;
+	font-size: 2em;
+	font-family: Montserrat, sans-serif;
+	vertical-align: middle;
+	font-weight: "thin";
+	font-weight: lighter;
+  	padding-left: .75em;
+  	padding-right: .75em;
+  	letter-spacing: 0.05em;
+}
+
+
+ /***********HEADER FOR THE CARDS***************/
+.groups-body{
+	/*Rounded Corners*/
+
+	border-radius: .2em;
+	border: 0.05em solid rgba(136,136,136,0.50);
+	padding-bottom: 1.5em; 
+	padding-top: 0; 
+	width: 40%;
+	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
+
+	/*height: 8%;*/
+	display:inline-block;
+	margin-left: 1.8em;
+	margin-right: 4em;
+	padding-left: 1em;
+	padding-right: 1em;
+	/*Flex container parameters-- so the box grows down w/ children*/
+	display: inline-flex;
+	flex-direction: column;
+
+
+}
+
+
+.event-body{
+	/*Rounded Corners*/
+	margin-top: 2em;
+
+	border-radius: .2em;
+	border: 0.05em solid rgba(136,136,136,0.50);
+	padding-top: 0; 
+	width: 40%;
+	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
+
+	/*height: 8%;*/
+	display:inline-block;
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-left: .4em;
+
+	/*Flex container parameters-- so the box grows down w/ children*/
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.group-event-header{
+	padding-bottom: 1em;
+	margin-bottom: 2em; 
+	border-bottom: 0.05em solid rgba(0,0,0,0.4);
+}
+
+
+.group-event-header-txt{
+	margin-top: 0px;
+	padding-top: .1em;
+	text-align: center; 
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 'light';
+	letter-spacing: 0.05em;
+	padding-bottom: 0; 
+	margin-bottom: .25em;
+}
+
+
+.group-event-header{
+	display:inline-block;
+	vertical-align: middle;
+
+}
+
+
+.group-class-options{
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	padding-top: 0; 
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.category{
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+/***************************** Search Bar *******************************/
+
+
+.group-event-searchbar{
+	background-color: rgba(144, 165, 169, .2); 
+	width: 60%;
+	height: 1.5em;
+  	border-radius: .2em;
+	border: .04em solid rgba(136,136,136,0.50);
+	vertical-align: middle;
+	padding-left: 0;
+	display:inline-block;
+	cursor: pointer;
+}
+.group-search .group-event-searchbar{
+	display: table;
+	margin: 0 auto;
+}
+
+.group-search{
+}
+
+
+
+.group-event-searchbar ion-icon{
+  	vertical-align: middle;
+  	padding: 0;
+  	margin:0;
+	width: 1em;
+	height: 1em;
+	/*color: rgba(30,130,76, .75);*/
+	color:rgba(136,136,136, 1);
+	text-align: left;
+	display:inline-block;
+  }
+
+.search{
+	font-family: 'Montserrat', sans-serif;
+	color:rgba(136,136,136, 1);
+	vertical-align: middle;
+	padding:0;
+	margin:0;
+	display:inline-block;
+}
+
+/******* Event Calender *********/
+.event-stripe{
+	display:inline-block;
+	margin:0px;
+	padding-bottom: 9em;
+}
+
+
+.event-calender{
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+.event-calender ion-icon{
+	width: 1em;
+	height: 1em;
+	line-height: 50px;
+	vertical-align: middle;
+	font-size: 40px;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	color: #1e824c;
+  }
+
+.calendar-txt{
+	font-family: 'Montserrat', sans-serif;
+	font-size: .75em;
+	cursor: pointer;
+	letter-spacing: 0.05em;
+}
+
+/*
+#owner_admin{
+	border-bottom: 2px solid; 
+	border-bottom-color: #1e824c;
+}*/
+/******** Formatting Owner and Admin Icon and Profile PIc*******/
+
+
+#owner-icon {
+	padding: 0em;
+	width: 5em;
+	height: 5em;
+	line-height: 5em;
+}
+
+#owner-icon img{
+	display: inline;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+#admin-icon {
+	padding: 0px;
+	width: 50px;
+	height: 53px;
+	line-height: 50px;
+}
+
+#admin-icon img{
+	display: inline;
+    margin: 0 auto;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+ }
+
+/*********** The individual group cards********************/
+
+/*
+	.group-card
+		.group-header
+			.profile-pic-small
+			.group-txt-info
+				.group-handle
+				.group-txt-footer
+					.group-desc
+					.group-loc					
+			.priviledge-lvl
+				#owner-icon
+		.group-footer
+
+
+*/
+.group-card-holder{
+	//border: 1px solid rgba(136,136,136,0.50);
+	//display: inline-flex;
+	//flex-direction: column;
+	width: 100%;
+}
+
+.group-card{
+	width: 100%;
+	border: 1px solid rgba(136,136,136,0.50);
+	border-radius: 2px 2px 2px 2px;
+}
+.group-header{
+	padding-top: 0.1em;
+	float: center; 
+	width: 95%;
+	height:4.45em;
+	margin:0;
+	margin-left: .6em;
+}
+
+.profile-pic-small{
+	padding:0;
+	padding-right: .4em;
+	width: 4em;
+	height: 4em;
+	margin:0;
+	display:inline-block;
+	vertical-align: middle;
+}
+
+.profile-pic-small img{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(136,136,136,0.50);
+}
+
+.group-txt-info{
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	line-height: .75em; 
+	font-weight: 'semi-bold';
+	margin:0;
+	padding:0;
+	padding-top: 4px;
+	vertical-align: middle;
+}
+
+.group-handle{
+	font-weight: bold;
+	margin-bottom: .4em;
+}
+.group-txt-footer{
+	font-size: .60em; 
+	letter-spacing: 0.04em;
+	color: rgba(0,0,0,0.80);
+
+}
+
+.delimiter-group-txt{
+	font-size: 1em; 
+}
+
+.owner-icon{
+	margin:0;
+	padding: 0;
+}
+
+.priviledge-lvl{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: .60em; 
+	text-align: center; 
+	//width: 4em;
+	height: 50%;
+	color: rgba(0,0,0,0.60);
+	letter-spacing: 0.04em;
+	vertical-align: middle;
+	float: right;
+	margin:0;
+	margin-top: 1em;
+	//margin-right: 1.5em;
+}
+
+.group-footer{
+	padding-top: .4em;
+	width: 100%; 
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(0,0,0,.2);
+	padding-bottom: .4em;
+	height: 1.8em;
+	border-top: 1px solid rgba(0,0,0,0.2);
+
+	margin-bottom: .4em;
+}
+
+.manager{
+	vertical-align: middle;
+	margin-left:8%;
+	margin-right: 0;
+	width: 30%;
+	text-align: left;
+	padding-left: .4em;
+	border: 1px solid rgba(136,136,136,0.50); 
+	text-shadow: .03em .03em rgba(136,136,136,0.75);
+
+	border-radius: 4em 4em 4em 4em;
+	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	cursor: pointer; 
+	padding-bottom: .2em;
+	padding-top: .2em;
+	background-color: rgba(252, 252, 252,1);
+
+}
+
+.chat{
+	vertical-align: middle;
+	margin-right:0;
+	margin-left: 20%;
+	letter-spacing: 0.07em;
+	width: 30%;
+	text-align: left;
+	padding-left: 1em;
+	border: 1px solid rgba(136,136,136,0.50); 
+	text-shadow: .03em .03em rgba(136,136,136,0.75);
+
+	border-radius: 4em 4em 4em 4em;
+	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	cursor: pointer; 
+	padding-bottom: .2em;
+	padding-top: .2em;
+	background-color: rgba(252, 252, 252,1);
+
+}
+
+.alerts{
+	width:2em;
+	height:1.8em;
+	font-size: .8em;
+	vertical-align: middle;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 0;
+	text-shadow: .03em .03em rgba(136,136,136,0.75);
+
+	background-color: rgba(49, 139, 89,.8);
+	color:rgba(255,255,255, .8);
+	text-shadow: .04em .04em rgba(255,255,255, .8);
+	box-shadow: 0px 1px 0px 0px rgba(136,136,136,0.75);
+	margin-bottom: .1em;
+}
+
+.manager .alerts{
+	margin-left:22%;
+}
+
+.chat .alerts{
+	margin-left:37.5%;
+}
+/************************************************************/
+
+
+#screen {
+	margin:0;	
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 0;
+
+}
+
+#smaller-screen {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	width: 97%;
+	height: 90%;
+	margin-top:-1em;
+}
+
+#head-bar {
+	display: block;
+	color: black;
+	background-color: white;
+	height: 30%;
+	width: 82%;
+	font-size: 20px;
+	padding-top: 1em;
+	padding-left: 1em;
+	padding-bottom: auto;
+	margin-bottom: 3em; 
+	margin-left: 2em;
+	padding-right: 4em;
+	font-family: Montserrat;
+	border: 1px solid rgba(136,136,136,0.40);
+	padding-right: 4em;
+	box-shadow: 0em 0em 1em 0em rgba(136,136,136,0.75);
+}
+
+.name {
+	display:inline-block;
+	font-size: 2em;
+	font-family: Montserrat;
+	text-align: left;
+	width: 90%;
+	letter-spacing: 0.1em;
+	margin-left: .5em;
+
+}
+
+.head-top {
+	margin-bottom: 1em;
+	border-bottom: 1px solid rgba(136,136,136,0.50);
+	width:100%;
+	height:10%;
+	color: #1e824c;
+	color:rgba(0, 100, 0,1);
+}
+
+.avatar{
+	float: left;
+	padding:0;
+	margin-right: 4em;
+	padding-right: 2em;
+	width: 6em;
+	height: 6em;
+	margin:0;
+	display:inline-block;
+}
+
+.avatar img{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(136,136,136,0.50);
+}
+
+.user-name{
+	font-size:6em; 
+}
+
+.menu-option{
+	color: #1e824c;
+	font-size:2em;
+}
+
+
+.email-header{
+	color:rgba(47,79,79,0.50);
+}
+
+
+.handle-header{
+	margin-right:0;
+	margin-left:25em;
+	color:rgba(47,79,79,0.50);
+}
+
+
+#edit-profile{
+	margin-top: 1.3em;
+	margin-left: -7.3em; 
+	margin-right: 0; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	color: #1e824c; 
+}
+
+.user-handle{
+	margin-right: 0;
+	margin-left:35em;	
+}
+
+.user-identifiers{
+	font-family: Montserrat;
+	font-size:.5em;
+}
+
+
+
+
+
+
+
