@@ -161,6 +161,7 @@ body {
 	height: 10%;
 	width: 100%;
 	margin-bottom: 2em;
+	margin-top: .5em;
 
 }
 
@@ -193,8 +194,8 @@ body {
 	height: 100%;
 
 
-	padding-bottom: 1em; 
-	padding-top: 0; 
+	padding-bottom: .4em; 
+	padding-top: .4em; 
 	width: 40%;	
 	margin-left: 3em;
 	margin-right: 2em;
@@ -214,8 +215,8 @@ body {
 
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
-	padding-top: 0; 
-	padding-bottom: 1em; 
+	padding-top: .4em;  
+	padding-bottom: .4em; 
 	width: 40%;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -317,13 +318,20 @@ body {
 }
 
 .mail .horiz-button-icon-txt{
-	padding-left: .5em;
+	padding-left: .1em;
+	letter-spacing: 0.1em;
+
 
 }
 .alerrts .horiz-button-icon-txt{
 	/*padding-left: .7em;*/
-	padding-left: 0em;
+	padding-left: .6em;
+	letter-spacing: 0.1em;
+}
 
+.contacts .horiz-button-icon-txt{
+	/*padding-left: .7em;*/
+	letter-spacing: 0.05em;
 }
 
 /*THIS IS TO GIVE INDICATION OF UNREAD Mail/Alerts/New Contacts and shit*/
@@ -373,7 +381,6 @@ body {
 
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
-	display:inline-block;
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
 
 	/*height: 8%;*/
@@ -389,6 +396,8 @@ body {
 	display: inline-flex;
 	flex-direction: column;
 	background-color: rgba(255, 255, 255,1);
+	overflow: auto;
+	flex: 1;
 	
 }
 
@@ -417,7 +426,7 @@ body {
 }
 
 .group-event-header{
-
+	width: 99%;
 	display:inline-block;
 	vertical-align: middle;
 	padding-bottom: 1em;
@@ -586,17 +595,42 @@ body {
 
 
 */
+
+/*Settings for scrolling box*/
+.content {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: scroll;
+} 
+
+.block{
+  height: 20em;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.content::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+.content::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+
 .group-card-holder{
 	//border: 1px solid rgba(136,136,136,0.50);
 	//display: inline-flex;
-	//flex-direction: column;
-	width: 100%;
+	flex-direction: column;
+    display: flex;
 }
 
 .group-card{
-	width: 100%;
+	width: 99%;
 	border: .05em solid rgba(136,136,136,0.50);
 	border-radius: .1px .1px .1px .1px;
+	margin-bottom: 1em;
 }
 .group-header{
 	padding-top: 0.1em;
