@@ -1,68 +1,233 @@
 body {
 	/*background-image: url("images/iphoneOL.jpg");*/
 	font-family: Palatino, sans-serif;
-	font-size:1.3vw;
+	font-size:1.5vw;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
 
 
 }
 
+#screen {
+	margin:0;	
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	margin-bottom: 0;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	
+}
+
+/******************* top line of the page (logo + options) ************/
+.head-top {
+	margin-bottom: 1em;
+	border-bottom: .05em solid rgba(136,136,136,0.50);
+	width:100%;
+	height:10%;
+	color: #1e824c;
+	color:rgba(0, 100, 0,1);
+}
+
+.name {
+	display:inline-block;
+	font-size: 2em;
+	font-family: Montserrat;
+	text-align: left;
+	width: 90%;
+	letter-spacing: 0.1em;
+	margin-left: .5em;
+
+}
+
+.menu-option{
+	color: #1e824c;
+	font-size:2em;
+}
+
+/************************** User part of the page**********/
+
+
+#smaller-screen {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 97%;
+	height: 90%;
+	margin-top:-1em;
+	
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	
+
+
+}
+
+
+#head-bar {
+	display: block;
+	color: black;
+	background-color: white;
+	height: 25%;
+	width: 82%;
+	font-size: 1em;
+	padding-top: .8em;
+	padding-left: 1em;
+	padding-bottom: .4em;
+	margin-bottom: 3em; 
+	padding-right: 4em;
+	padding-right: 4em;
+	margin-left: 3em;
+	margin-right: 2em;
+
+	font-family: Montserrat;
+	border: 1px solid rgba(136,136,136,0.40);
+
+	box-shadow: 0em 0em 1em 0em rgba(136,136,136,0.75);
+	
+
+}
+
+
+
+
+.avatar{
+	float: left;
+	padding:0;
+	margin-right: 4em;
+	padding-right: 2em;
+	width: 7em;
+	height: 6em;
+	margin:0;
+	display:inline-block;
+}
+
+.avatar img{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: .05em solid rgba(136,136,136,0.50);
+}
+
+.user-name{
+	font-size:6em; 
+}
+
+
+
+.email-header{
+	color:rgba(47,79,79,0.50);
+}
+
+
+.handle-header{
+	margin-right:0;
+	margin-left:20em;
+	color:rgba(47,79,79,0.50);
+}
+
+
+#edit-profile{
+	margin-top: 1.3em;
+	margin-right: 0; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	color: #1e824c; 
+	vertical-align: middle;
+	padding-left: 1em;
+	font-size:1em;
+
+}
+
+.user-handle{
+	margin-right: 0;
+	margin-left:11.5em;	
+}
+
+.user-identifiers{
+	font-family: Montserrat;
+	font-size:.7em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+
+/********************** The two big buttons for create group + event ************************************/
+
+.groupevent_button{
+	background: solid;
+	height: 10%;
+	width: 100%;
+	margin-bottom: 2em;
+
+}
 
 /** The Group and Event Button */
-#group-event-button {
-	color:black;
-}
 
-.create-group-event ion-icon {
+ #event-button ion-icon {
   vertical-align: middle;
-  	padding-left: .75em;
-	padding: 0;
-	width: 20%;
-	height: 130%;
-	margin-left: 10%;
+  	padding-left: 1em;
+  	padding-right: 0;
+  	color: #1e824c; 
+	font-size: 3em;
+  }
+
+ #group-button ion-icon {
+  vertical-align: middle;
+  	padding-left: .8em;
+  	padding-right: 0;
 	color: #1e824c; 
+	font-size: 3em;
   }
 
 
-#group-button-format{
+#group-button{
+	vertical-align: middle;
 	/*Rounded Corners*/
 
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
-	padding-bottom: 1.2em; 
 
-	padding-top: .4em; 
-	width: 40%;
-	height: 8%;
-	display:inline-block;
-	margin-left: 2em;
-	margin-right: 4em;
-	padding-left: 1.1em;
-	padding-right: 1.1em;
+	height: 100%;
+
+
+	padding-bottom: 1em; 
+	padding-top: 0; 
+	width: 40%;	
+	margin-left: 3em;
+	margin-right: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
 
 	text-shadow: .04em .04em  rgba(136,136,136,0.75); 
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+	background-color: white;
+
 }
 
 
-#event-button-format{
+#event-button{
+	vertical-align: middle;
 	/*Rounded Corners*/
-	margin-top: 1em;
 
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
-	padding-bottom: 1.2em; 
-
-	padding-top: .4em; 
+	padding-top: 0; 
+	padding-bottom: 1em; 
 	width: 40%;
-	height: 8%;
-	display:inline-block;
 	padding-left: 1em;
-	margin-right: 4em;
-	padding-right: 1.1em;
+	padding-right: 1em;
+	margin-left: .4em;
+	height: 100%;
+
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
 	text-shadow: .04em .04em rgba(136,136,136,0.75); 
+	background-color: white;
 
 }
+
 
 .group-event-name{
 	width:40%;
@@ -76,6 +241,131 @@ body {
   	letter-spacing: 0.05em;
 }
 
+/************** Horizontal alligned button for mail box, contacts, alerts **********/
+
+.horiz-button-body{
+	height: 6vh;
+	width: 60%;
+	padding-top: 0;
+	padding-bottom: 9em;
+	padding-right: 0em;
+
+	margin-bottom: 0em;
+	margin-top:-1.8em;
+	margin-left: 9em;
+
+
+}
+
+
+
+.mail{
+	width: 25%;
+	height: 100%;
+	margin-left: 0;
+	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+    border-radius: 1em 1em 1em 1em;
+}
+
+.contacts{
+	width: 25%;
+	height: 100%;
+	margin-left: 9.9%;
+    border-radius: 1em 1em 1em 1em;
+	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+
+}
+
+.alerrts{
+	width: 25%;
+	height: 100%;
+	margin-left: 9.9%;
+	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+    border-radius: 1em 1em 1em 1em;
+}
+
+.horiz-button-icon-body{
+    border-radius: 1em 0em 0em 1em;
+
+}
+
+
+.mail ion-icon{
+	color: white;
+	font-size: 1.8em;
+
+
+}
+
+.contacts ion-icon{
+	color: white;
+	font-size: 1.8em;
+}
+
+.alerrts ion-icon{
+	color: white;
+	font-size: 1.8em;
+}
+
+.horiz-button-icon-txt{
+	vertical-align: middle;
+	font-family: Montserrat, sans-serif;
+	font-size: .8em;
+	text-align: center;
+	padding-bottom:1.5em;
+
+}
+
+.mail .horiz-button-icon-txt{
+	padding-left: .5em;
+
+}
+.alerrts .horiz-button-icon-txt{
+	/*padding-left: .7em;*/
+	padding-left: 0em;
+
+}
+
+/*THIS IS TO GIVE INDICATION OF UNREAD Mail/Alerts/New Contacts and shit*/
+.notification{
+	background-color: white;
+	height: 1.2em;
+	width: 1.2em;
+	line-height: 1.2em;
+	font-size: .8em;
+	border-radius: 5em;
+	vertical-align: middle;
+	color:rgb(112,128,144);
+	margin: 0;
+	margin-bottom: 1.5em;
+	margin-right: .24em;
+
+}
+
+
+
+.mail .horiz-button-icon-body{
+	height:100%;
+	width: 45%;
+	background-color:rgba(131,52,113,.75);
+
+	text-align: center;
+}
+.contacts .horiz-button-icon-body{
+	height:100%;
+	width: 45%;
+	background-color:rgba(	30,130,76,.78);
+	text-align: center;
+}
+
+.alerrts .horiz-button-icon-body{
+	width: 45%;
+	height:100%;
+	text-align: center;
+	background-color:rgba(205,92,92,.78);
+
+}
+
 
  /***********HEADER FOR THE CARDS***************/
 .groups-body{
@@ -83,33 +373,34 @@ body {
 
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
-	padding-bottom: 1.5em; 
-	padding-top: 0; 
-	width: 40%;
+	display:inline-block;
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
 
 	/*height: 8%;*/
-	display:inline-block;
-	margin-left: 1.8em;
-	margin-right: 4em;
+	padding-bottom: 1.5em; 
+	padding-top: 0; 
+	width: 40%;	
+	margin-left: 3em;
+	margin-right: 2em;
 	padding-left: 1em;
 	padding-right: 1em;
+
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
-
-
+	background-color: rgba(255, 255, 255,1);
+	
 }
 
 
 .event-body{
 	/*Rounded Corners*/
-	margin-top: 2em;
-
+	margin-top: 1.5em;
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
 	padding-top: 0; 
 	width: 40%;
+
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
 
 	/*height: 8%;*/
@@ -121,12 +412,18 @@ body {
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
+	background-color: rgba(255, 255, 255,1);
+
 }
 
 .group-event-header{
+
+	display:inline-block;
+	vertical-align: middle;
 	padding-bottom: 1em;
 	margin-bottom: 2em; 
 	border-bottom: 0.05em solid rgba(0,0,0,0.4);
+	background-color: rgba(255, 255, 255,1);	
 }
 
 
@@ -139,14 +436,10 @@ body {
 	letter-spacing: 0.05em;
 	padding-bottom: 0; 
 	margin-bottom: .25em;
-}
-
-
-.group-event-header{
-	display:inline-block;
-	vertical-align: middle;
+	background-color: rgba(255, 255, 255,1);
 
 }
+
 
 
 .group-class-options{
@@ -223,9 +516,8 @@ body {
 .event-calender ion-icon{
 	width: 1em;
 	height: 1em;
-	line-height: 50px;
 	vertical-align: middle;
-	font-size: 40px;
+	font-size: 2em;
 	cursor: pointer;
 	margin: 0;
 	padding: 0;
@@ -263,9 +555,9 @@ body {
 
 #admin-icon {
 	padding: 0px;
-	width: 50px;
-	height: 53px;
-	line-height: 50px;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
 }
 
 #admin-icon img{
@@ -303,8 +595,8 @@ body {
 
 .group-card{
 	width: 100%;
-	border: 1px solid rgba(136,136,136,0.50);
-	border-radius: 2px 2px 2px 2px;
+	border: .05em solid rgba(136,136,136,0.50);
+	border-radius: .1px .1px .1px .1px;
 }
 .group-header{
 	padding-top: 0.1em;
@@ -330,7 +622,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    border: 1px solid rgba(136,136,136,0.50);
+    border: .05em solid rgba(136,136,136,0.50);
 }
 
 .group-txt-info{
@@ -340,7 +632,7 @@ body {
 	font-weight: 'semi-bold';
 	margin:0;
 	padding:0;
-	padding-top: 4px;
+	padding-top: .2em;
 	vertical-align: middle;
 }
 
@@ -387,7 +679,7 @@ body {
 	color: rgba(0,0,0,.2);
 	padding-bottom: .4em;
 	height: 1.8em;
-	border-top: 1px solid rgba(0,0,0,0.2);
+	border-top: .05em solid rgba(0,0,0,0.2);
 
 	margin-bottom: .4em;
 }
@@ -403,7 +695,7 @@ body {
 	text-shadow: .03em .03em rgba(136,136,136,0.75);
 
 	border-radius: 4em 4em 4em 4em;
-	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	box-shadow: 0px .1em 0px 0px rgba(220,220,220,.5);
 	cursor: pointer; 
 	padding-bottom: .2em;
 	padding-top: .2em;
@@ -423,13 +715,15 @@ body {
 	text-shadow: .03em .03em rgba(136,136,136,0.75);
 
 	border-radius: 4em 4em 4em 4em;
-	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	box-shadow: 0px .1em 0px 0px rgba(220,220,220,.5);
 	cursor: pointer; 
 	padding-bottom: .2em;
 	padding-top: .2em;
 	background-color: rgba(252, 252, 252,1);
 
 }
+
+
 
 .alerts{
 	width:2em;
@@ -444,7 +738,7 @@ body {
 	background-color: rgba(49, 139, 89,.8);
 	color:rgba(255,255,255, .8);
 	text-shadow: .04em .04em rgba(255,255,255, .8);
-	box-shadow: 0px 1px 0px 0px rgba(136,136,136,0.75);
+	box-shadow: 0px .05em 0px 0px rgba(136,136,136,0.75);
 	margin-bottom: .1em;
 }
 
@@ -456,125 +750,6 @@ body {
 	margin-left:37.5%;
 }
 /************************************************************/
-
-
-#screen {
-	margin:0;	
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	margin-bottom: 0;
-
-}
-
-#smaller-screen {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: white;
-	width: 97%;
-	height: 90%;
-	margin-top:-1em;
-}
-
-#head-bar {
-	display: block;
-	color: black;
-	background-color: white;
-	height: 30%;
-	width: 82%;
-	font-size: 20px;
-	padding-top: 1em;
-	padding-left: 1em;
-	padding-bottom: auto;
-	margin-bottom: 3em; 
-	margin-left: 2em;
-	padding-right: 4em;
-	font-family: Montserrat;
-	border: 1px solid rgba(136,136,136,0.40);
-	padding-right: 4em;
-	box-shadow: 0em 0em 1em 0em rgba(136,136,136,0.75);
-}
-
-.name {
-	display:inline-block;
-	font-size: 2em;
-	font-family: Montserrat;
-	text-align: left;
-	width: 90%;
-	letter-spacing: 0.1em;
-	margin-left: .5em;
-
-}
-
-.head-top {
-	margin-bottom: 1em;
-	border-bottom: 1px solid rgba(136,136,136,0.50);
-	width:100%;
-	height:10%;
-	color: #1e824c;
-	color:rgba(0, 100, 0,1);
-}
-
-.avatar{
-	float: left;
-	padding:0;
-	margin-right: 4em;
-	padding-right: 2em;
-	width: 6em;
-	height: 6em;
-	margin:0;
-	display:inline-block;
-}
-
-.avatar img{
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 1px solid rgba(136,136,136,0.50);
-}
-
-.user-name{
-	font-size:6em; 
-}
-
-.menu-option{
-	color: #1e824c;
-	font-size:2em;
-}
-
-
-.email-header{
-	color:rgba(47,79,79,0.50);
-}
-
-
-.handle-header{
-	margin-right:0;
-	margin-left:25em;
-	color:rgba(47,79,79,0.50);
-}
-
-
-#edit-profile{
-	margin-top: 1.3em;
-	margin-left: -7.3em; 
-	margin-right: 0; 
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: lighter;
-	color: #1e824c; 
-}
-
-.user-handle{
-	margin-right: 0;
-	margin-left:35em;	
-}
-
-.user-identifiers{
-	font-family: Montserrat;
-	font-size:.5em;
-}
 
 
 

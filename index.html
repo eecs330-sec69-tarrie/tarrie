@@ -15,7 +15,7 @@
 						<b>Tarri&#x0113;</b>
 					</div>
 
-					<div class="menu-option" style="float:right;display:inline-block">
+					<div class="menu-option" style="display:inline-block">
 						<ion-icon name="menu"></ion-icon>
 					</div>
 				</div>
@@ -28,50 +28,77 @@
 					<div id="user-name" style="text-align:left;">
 						<i>Becky Tousilienie</i>
 					</div>
-					<div style="font-size: 10px;text-align:left;">
+					<div style="font-size: .65em;text-align:left;">
 						10 posted events &#8226; following 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
 					</div>
 					<hr style="margin-left:10%;margin-right:10%;">
 					
 					<span class="email-header"> email</span>
-					<span class="handle-header"> handle</span>
+					<span class="handle-header"> user name</span>
 
 					<div class="user-identifiers">
 						<span class="user-email">beckytousilienie2021@u.northwestern.edu</span>
 						<span class="user-handle">becky_t_95</span>
 					</div>
-
-
-
 					
-					<!--<div style="display:inline;text-align:left;float:left;border:1px solid red;">
-						Handle<br>
-						jide_anene
-					</div>-->
-					<div id="edit-profile" style="display:inline-block">
-						Edit Profile
+					<a href="#" style="color:inherit;text-decoration:none">
+						<div id="edit-profile" >
+							Edit Profile
+						</div>
+					</a>
+
+					<!-- Strip that holds the mail button, alerts button, contacts-->
+					<div class="horiz-button-body"  style="display:inline-block;">
+						<!--Mail box: Purple-->
+						<div class="mail" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="mail"></ion-icon>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Mailbox</div>
+						</div>
+
+						<!--Contacts: Blue-->
+						<div class="contacts" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="people"></ion-icon>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Contacts</div>
+						</div>
+
+						<!--Alerts: Color Orange-->
+						<div class="alerrts" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="notifications-outline"></ion-icon>
+								<div class="notification" style="display:inline-block;"> 2 </div>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Alerts</div>
+						</div>
 					</div>
+
+
 				</div>
 
 			<div id="smaller-screen">
 
-				<!--Container to hold the button for creating a group  -->
-				<div id="group-event-header">
-					<a id="group-event-button" href="#" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
-						<div id="group-button-format" class="create-group-event">
-							<ion-icon name="add"></ion-icon>
-							<span class="group-event-name"> Create Group</span>
-						</div>
-					</a>
 
-				<!--Container to hold the button for creating a event  -->
-					<a id="group-event-button" href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')">
-						<div id="event-button-format" class="create-group-event">
-							<ion-icon name="add"></ion-icon>
-							<span class="group-event-name">Create Event</span>
-						</div>
-					</a>
+
+
+				<div class="groupevent_button" style="display:inline-block;">
+					<!--Container to hold the button for creating a group  -->
+					<div id="group-button" style="display:inline-block;">
+						<ion-icon style="display:inline-block;" name="add"></ion-icon>
+						<span class="group-event-name"> Create Group</span>
+					</div>
+						
+					<!--Container to hold the button for creating a event  -->
+						<!--<a href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')" style="color:inherit;text-decoration:none">
+						</a>-->
+					<div id="event-button" style="display:inline-block;">
+						<ion-icon style="display:inline-block;" name="add"></ion-icon>
+						<span class="group-event-name">Create Event</span>
+					</div>
 				</div>
+
 
 				<!--Container to hold body for scrollanble group cards  -->
 				<div class="groups-body">
@@ -191,14 +218,7 @@
 
 				</div>
 
-				<!--
-				<div id="owner-icon">
-					<img src="./images/owner.png" alt="owner">
-				</div>
 
-				<div id="admin-icon">
-					<img src="./images/admin.png" alt="admin">
-				</div>-->
 
 			</div>
 		</div>
