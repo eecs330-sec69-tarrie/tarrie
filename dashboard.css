@@ -5,15 +5,13 @@ body {
 	background-image: url("./images/cream_dust.png");
 	background-repeat: repeat-x repeat-y;
 
-
 }
 
 #screen {
-	margin:0;	
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	margin-bottom: 0;
+	margin: 0 auto;
 	background-image: url("./images/cream_dust.png");
 	background-repeat: repeat-x repeat-y;
 	
@@ -59,8 +57,6 @@ body {
 	background-image: url("./images/cream_dust.png");
 	background-repeat: repeat-x repeat-y;
 	
-
-
 }
 
 
@@ -264,30 +260,30 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 0;
-	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
-    border-radius: 1em 1em 1em 1em;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+    border-radius: .8em;
 }
 
 .contacts{
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
-    border-radius: 1em 1em 1em 1em;
-	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
-
+    border-radius: .8em;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+	border: .01em solid rgba(136,136,136,0.75);
 }
 
 .alerrts{
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
-	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
-    border-radius: 1em 1em 1em 1em;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+    border-radius: .8em;
+
 }
 
 .horiz-button-icon-body{
-    border-radius: 1em 0em 0em 1em;
-
+    border-radius: .8em 0em 0em .8em;
 }
 
 
@@ -432,7 +428,8 @@ body {
 	padding-bottom: 1em;
 	margin-bottom: 2em; 
 	border-bottom: 0.05em solid rgba(0,0,0,0.4);
-	background-color: rgba(255, 255, 255,1);	
+	background-color: rgba(255, 255, 255,1);
+
 }
 
 
@@ -547,6 +544,38 @@ body {
 }*/
 /******** Formatting Owner and Admin Icon and Profile PIc*******/
 
+#favs-icon{
+	width: 10%;
+	height:90%;
+	line-height: 4em;
+	margin:0;
+	margin-left: 48%;
+	padding:0;
+	vertical-align: middle;
+	cursor: pointer;
+
+}
+#favs-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+#general-icon{ 
+	padding: 0em;
+	width: 5em;
+	height: 5em;
+	line-height: 5em;
+ }
+
+#general-icon {
+	padding: 0em;
+	width: 5em;
+	height: 5em;
+	line-height: 5em;
+}
+
+
+
 
 #owner-icon {
 	padding: 0em;
@@ -564,9 +593,9 @@ body {
 
 #admin-icon {
 	padding: 0px;
-	width: 2em;
-	height: 2em;
-	line-height: 2em;
+	width: 5em;
+	height: 5em;
+	line-height: 5em;
 }
 
 #admin-icon img{
@@ -577,6 +606,40 @@ body {
     width: 100%;
     border-radius: 50%;
  }
+
+
+.priviledge-lvl{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: .60em; 
+	text-align: center; 
+	//width: 4em;
+	height: 60%;
+	color: rgba(0,0,0,0.60);
+	letter-spacing: 0.04em;
+	vertical-align: middle;
+	float: right;
+	margin:0;
+	//border: solid;
+	margin-top: 1em;
+	//margin-right: 1.5em;
+	padding:0;
+}
+
+
+.group-footer{
+	//padding-top: .4em;
+	width: 100%; 
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(0,0,0,.2);
+	//padding-bottom: .0;
+	height: 2.5em;
+	border-top: .05em solid rgba(0,0,0,0.2);
+	//border: solid;
+	//margin-bottom: .4em;
+	padding:0;
+	margin:0;
+}
 
 /*********** The individual group cards********************/
 
@@ -604,34 +667,52 @@ body {
 } 
 
 .block{
-  height: 20em;
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
+  margin-bottom: 2em;
 }
 
 .content::-webkit-scrollbar {
-    width: 0px;  /* Remove scrollbar space */
-    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 1px;  /* Remove scrollbar space */
+    //background: transparent;  /* Optional: just make scrollbar invisible */
 }
 /* Optional: show position indicator in red */
 .content::-webkit-scrollbar-thumb {
-    background: #FF0000;
+    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;  /* Remove scrollbar space */
+    display: none;
+    color: rgba(136,136,136,0.50);
 }
 
 
 .group-card-holder{
 	//border: 1px solid rgba(136,136,136,0.50);
 	//display: inline-flex;
+	height: 65vh;
 	flex-direction: column;
     display: flex;
+	border: .04em solid rgba(136,136,136,0.50);
+	width: 95%;
+	padding-left: 12px;
+	padding-right: 10px;
+
 }
 
 .group-card{
 	width: 99%;
 	border: .05em solid rgba(136,136,136,0.50);
-	border-radius: .1px .1px .1px .1px;
+	border-radius: .5em;
 	margin-bottom: 1em;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	box-shadow: 0 .1em .1em 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
 }
+.group-card:hover {
+	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
+}
+
 .group-header{
 	padding-top: 0.1em;
 	float: center; 
@@ -685,38 +766,8 @@ body {
 	font-size: 1em; 
 }
 
-.owner-icon{
-	margin:0;
-	padding: 0;
-}
 
-.priviledge-lvl{
-	font-family: 'Open Sans', sans-serif;
-	font-style: italic;
-	font-size: .60em; 
-	text-align: center; 
-	//width: 4em;
-	height: 50%;
-	color: rgba(0,0,0,0.60);
-	letter-spacing: 0.04em;
-	vertical-align: middle;
-	float: right;
-	margin:0;
-	margin-top: 1em;
-	//margin-right: 1.5em;
-}
 
-.group-footer{
-	padding-top: .4em;
-	width: 100%; 
-	font-family: 'Open Sans', sans-serif;
-	color: rgba(0,0,0,.2);
-	padding-bottom: .4em;
-	height: 1.8em;
-	border-top: .05em solid rgba(0,0,0,0.2);
-
-	margin-bottom: .4em;
-}
 
 .manager{
 	vertical-align: middle;
@@ -740,8 +791,10 @@ body {
 .chat{
 	vertical-align: middle;
 	margin-right:0;
-	margin-left: 20%;
+	margin-left: 3%;
+	margin-top: .5%;
 	letter-spacing: 0.07em;
+	height: 60%;
 	width: 30%;
 	text-align: left;
 	padding-left: 1em;
@@ -753,10 +806,24 @@ body {
 	cursor: pointer; 
 	padding-bottom: .2em;
 	padding-top: .2em;
-	background-color: rgba(252, 252, 252,1);
+	background-color: rgba(255, 252, 252,1);
 
 }
 
+.blank-chat{
+	vertical-align: middle;
+	margin-right:0;
+	margin-left: 3%;
+	margin-top: .5%;
+	height: 60%;
+	width: 30%;
+	padding-left: 1em;
+	cursor: default; 
+	padding-bottom: .2em;
+	padding-top: .2em;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+}
 
 
 .alerts{
@@ -786,7 +853,14 @@ body {
 /************************************************************/
 
 
-
+.footer{
+	width: 100%; 
+	height: 1%;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	margin-top:1em;
+	padding: 0;	
+}
 
 
 
