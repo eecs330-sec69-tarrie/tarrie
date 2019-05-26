@@ -664,6 +664,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   overflow: scroll;
+
 } 
 
 .block{
@@ -687,12 +688,11 @@ body {
 
 
 .group-card-holder{
-	//border: 1px solid rgba(136,136,136,0.50);
 	//display: inline-flex;
 	height: 65vh;
 	flex-direction: column;
     display: flex;
-	border: .04em solid rgba(136,136,136,0.50);
+	border: .05em solid rgba(136,136,136,0.50);
 	width: 95%;
 	padding-left: 12px;
 	padding-right: 10px;
