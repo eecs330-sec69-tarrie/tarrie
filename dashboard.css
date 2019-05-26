@@ -22,7 +22,7 @@ body {
 	margin-bottom: 1em;
 	border-bottom: .05em solid rgba(136,136,136,0.50);
 	width:100%;
-	height:10%;
+	height:4vw;
 	color: #1e824c;
 	color:rgba(0, 100, 0,1);
 }
@@ -32,15 +32,17 @@ body {
 	font-size: 2em;
 	font-family: Montserrat;
 	text-align: left;
-	width: 90%;
+	width: 94%;
 	letter-spacing: 0.1em;
-	margin-left: .5em;
+	margin-left: .4em;
 
 }
 
 .menu-option{
 	color: #1e824c;
-	font-size:2em;
+	font-size:2.3em;
+	margin:0;
+	padding:0;
 }
 
 /************************** User part of the page**********/
@@ -64,8 +66,8 @@ body {
 	display: block;
 	color: black;
 	background-color: white;
-	height: 25%;
-	width: 82%;
+	height: 15vw;
+	width: 83vw;
 	font-size: 1em;
 	padding-top: .8em;
 	padding-left: 1em;
@@ -73,8 +75,8 @@ body {
 	margin-bottom: 3em; 
 	padding-right: 4em;
 	padding-right: 4em;
-	margin-left: 3em;
-	margin-right: 2em;
+	margin-left: 2.5em;
+	margin-right: 3em;
 
 	font-family: Montserrat;
 	border: 1px solid rgba(136,136,136,0.40);
@@ -153,10 +155,9 @@ body {
 /********************** The two big buttons for create group + event ************************************/
 
 .groupevent_button{
-	background: solid;
-	height: 10%;
+	height: 5vw;
 	width: 100%;
-	margin-bottom: 2em;
+	margin-bottom: 5.5vw;
 	margin-top: .5em;
 
 }
@@ -187,16 +188,17 @@ body {
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
 
-	height: 100%;
 
+	width: 40vw;
+	margin-left: 3vw;
+	margin-right: 3vw;
 
 	padding-bottom: .4em; 
 	padding-top: .4em; 
-	width: 40%;	
-	margin-left: 3em;
-	margin-right: 2em;
 	padding-left: 1em;
 	padding-right: 1em;
+	height: 5vw;
+
 
 	text-shadow: .04em .04em  rgba(136,136,136,0.75); 
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
@@ -213,11 +215,10 @@ body {
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
 	padding-top: .4em;  
 	padding-bottom: .4em; 
-	width: 40%;
+	width: 40vw;
 	padding-left: 1em;
 	padding-right: 1em;
-	margin-left: .4em;
-	height: 100%;
+	height: 5vw;
 
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
 	text-shadow: .04em .04em rgba(136,136,136,0.75); 
@@ -241,14 +242,14 @@ body {
 /************** Horizontal alligned button for mail box, contacts, alerts **********/
 
 .horiz-button-body{
-	height: 6vh;
-	width: 60%;
+	height: 4vw;
+	width: 50vw;
 	padding-top: 0;
 	padding-bottom: 9em;
 	padding-right: 0em;
 
 	margin-bottom: 0em;
-	margin-top:-1.8em;
+	margin-top:-1.4em;
 	margin-left: 9em;
 
 
@@ -262,6 +263,7 @@ body {
 	margin-left: 0;
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
+
 }
 
 .contacts{
@@ -290,6 +292,7 @@ body {
 .mail ion-icon{
 	color: white;
 	font-size: 1.8em;
+	margin-top: .16em;
 
 
 }
@@ -297,11 +300,15 @@ body {
 .contacts ion-icon{
 	color: white;
 	font-size: 1.8em;
+	margin-top: .16em;
+
 }
 
 .alerrts ion-icon{
 	color: white;
 	font-size: 1.8em;
+	margin-top: .16em;
+
 }
 
 .horiz-button-icon-txt{
@@ -309,7 +316,8 @@ body {
 	font-family: Montserrat, sans-serif;
 	font-size: .8em;
 	text-align: center;
-	padding-bottom:1.5em;
+	padding-bottom:2em;
+	padding-top: .25em;
 
 }
 
@@ -323,6 +331,7 @@ body {
 	/*padding-left: .7em;*/
 	padding-left: .6em;
 	letter-spacing: 0.1em;
+
 }
 
 .contacts .horiz-button-icon-txt{
@@ -343,6 +352,7 @@ body {
 	margin: 0;
 	margin-bottom: 1.5em;
 	margin-right: .24em;
+
 
 }
 
@@ -380,19 +390,21 @@ body {
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
 
 	/*height: 8%;*/
-	padding-bottom: 1.5em; 
+	padding-bottom: 0vw; 
 	padding-top: 0; 
-	width: 40%;	
-	margin-left: 3em;
-	margin-right: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
+	width: 39vw;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-top: 0;
+	height:55vw;
+	margin-bottom: 0;
 
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
 	background-color: rgba(255, 255, 255,1);
-	overflow: auto;
 	flex: 1;
 	
 }
@@ -400,24 +412,30 @@ body {
 
 .event-body{
 	/*Rounded Corners*/
-	margin-top: 1.5em;
+
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
-	padding-top: 0; 
-	width: 40%;
-
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
+
+
+	margin-top: 0;
+	padding-top: 0; 
+	width: 39vw;
+	height:55vw;
+
 
 	/*height: 8%;*/
 	display:inline-block;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin-left: .4em;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-left: 0;
 
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
 	background-color: rgba(255, 255, 255,1);
+	overflow: auto;
+	flex: 1;
 
 }
 
@@ -672,6 +690,7 @@ body {
   display: inline-flex;
   flex-direction: column;
   margin-bottom: 2em;
+  width: 100%;
 }
 
 .content::-webkit-scrollbar {
@@ -688,27 +707,31 @@ body {
 
 
 .group-card-holder{
-	//display: inline-flex;
-	height: 65vh;
+	/*display: inline-flex;*/
+	height:35vw;
 	flex-direction: column;
     display: flex;
 	border: .05em solid rgba(136,136,136,0.50);
-	width: 95%;
-	padding-left: 12px;
-	padding-right: 10px;
+	width: 36vw;
+
+	padding-left: 1vw;
+	padding-right: 1vw;
 	padding-top: 1em;
+	margin-left:.3vw;
 
 }
+
 
 .group-card{
 	width: 99%;
 	border: .05em solid rgba(136,136,136,0.50);
 	border-radius: .5em;
 	margin-bottom: 1em;
-	background-image: url("./images/cream_dust.png");
+	background-image: url("./images/cream_dust.png");*/
 	background-repeat: repeat-x repeat-y;
 	box-shadow: 0 .1em .1em 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 .group-card:hover {
 	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
