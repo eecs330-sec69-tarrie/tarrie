@@ -576,20 +576,6 @@ body {
     width: 100%;
 }
 
-#general-icon{ 
-	padding: 0em;
-	width: 5em;
-	height: 5em;
-	line-height: 5em;
- }
-
-#general-icon {
-	padding: 0em;
-	width: 5em;
-	height: 5em;
-	line-height: 5em;
-}
-
 
 
 
@@ -640,6 +626,7 @@ body {
 	margin-top: 1em;
 	//margin-right: 1.5em;
 	padding:0;
+
 }
 
 

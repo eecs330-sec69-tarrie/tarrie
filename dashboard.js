@@ -51,7 +51,7 @@ function click_up(id, reverse=false){
 const member ={
 	ADMIN: {icon:'admin-icon', txt:'Admin', img:"./images/admin.png"},
 	OWNER: {icon:'owner-icon', txt:'Owner', img:"./images/owner.png"}, 
-	GENERAL: {icon:'general-icon', txt:'', img:"./images/cream_dust.png"}
+	GENERAL: {icon:'general-icon', txt:'', img:''}
 } 
 
 const faveImg={
@@ -194,44 +194,51 @@ function getFormat(club){
 						</span>
 					</div>	
 				</div>
-			</div>
-
-			<div class="priviledge-lvl">
-				<div id=${memIcon}>
-					<img src=${memImg} alt=${memTxt}>
-				</div>	
-				${memTxt}
 			</div>`
+
+    
+
+
 	if (memTxt==''){
-		formatt+=`</div>
-	 	<!--footer of a group card-->
-		<div class="group-footer">
-		    	<div class="blank-chat" id="blank-chat" style="display: inline-block;">
-		    	</div>
+		formatt+=`
+				</div>
+				 	<!--footer of a group card-->
+					<div class="group-footer">
+					    	<div class="blank-chat" id="blank-chat" style="display: inline-block;">
+					    	</div>
 
-	    	<div id="favs-icon" style="display: inline-block;" onclick="togglefav('${clubHandle}')">
-				<img  src=${favImg} alt="Fav">
-			</div>
-		</div>
- 	</div>`;
+				    	<div id="favs-icon" style="display: inline-block;" onclick="togglefav('${clubHandle}')">
+							<img  src=${favImg} alt="Fav" >
+						</div>
+					</div>
+			 	</div>`;
+
 	}else{
-		formatt+=`</div>
-	 	<!--footer of a group card-->
-		<div class="group-footer">
-			<!--<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">-->
-		    	<div class="chat" id="chat" style="display: inline-block;">
-		    		Chat
-		    		<div class="alerts" id="alerts" style="display: inline-block;">
-		    			${chatnumber}
-		    		</div>
-		    	</div>
-		    <!--</a>-->
+		formatt+=`<div class="priviledge-lvl">
+					<div id=${memIcon}>
+						<img src=${memImg} alt=${memTxt}>
+				 	</div>	
+					${memTxt}
+				  </div>
 
-	    	<div id="favs-icon" style="display: inline-block;" onclick="togglefav('${clubHandle}')">
-				<img  src=${favImg} alt="Fav">
-			</div>
-		</div>
- 	</div>`;
+
+					</div>
+					 	<!--footer of a group card-->
+						<div class="group-footer">
+							<!--<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">-->
+						    	<div class="chat" id="chat" style="display: inline-block;">
+						    		Chat
+						    		<div class="alerts" id="alerts" style="display: inline-block;">
+						    			${chatnumber}
+						    		</div>
+						    	</div>
+						    <!--</a>-->
+
+					    	<div id="favs-icon" style="display: inline-block;" onclick="togglefav('${clubHandle}')">
+								<img  src=${favImg} alt="Fav">
+							</div>
+						</div>
+				 	</div>`;
 	}
  	return formatt;
 }
