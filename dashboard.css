@@ -269,7 +269,7 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
-	
+
     border-radius: .8em;
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
 	border: .01em solid rgba(136,136,136,0.75);
@@ -736,6 +736,11 @@ body {
 .group-card:hover {
 	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
 }
+
+.group-card:focus {
+	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
+}
+
 
 .group-header{
 	padding-top: 0.1em;
