@@ -259,15 +259,17 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 0;
+
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
-
+	border: .01em solid rgba(136,136,136,0.75);
 }
 
 .contacts{
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
+	
     border-radius: .8em;
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
 	border: .01em solid rgba(136,136,136,0.75);
@@ -277,8 +279,10 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
+
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
+	border: .01em solid rgba(136,136,136,0.75);
 
 }
 
