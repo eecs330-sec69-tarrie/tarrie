@@ -454,7 +454,6 @@ body {
 	padding-top: .1em;
 	text-align: center; 
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 'light';
 	letter-spacing: 0.05em;
 	padding-bottom: 0; 
 	margin-bottom: .25em;
@@ -500,7 +499,6 @@ body {
 }
 
 
-
 .group-event-searchbar ion-icon{
   	vertical-align: middle;
   	padding: 0;
@@ -526,14 +524,17 @@ body {
 .event-stripe{
 	display:inline-block;
 	margin:0px;
-	padding-bottom: 9em;
+	padding:0;
+
 }
 
 
 .event-calender{
 	display:inline-block;
-	margin:0;
+	margin-top: -10em;
 	padding:0;
+	margin-bottom: -4em;
+
 }
 .event-calender ion-icon{
 	width: 1em;
@@ -541,8 +542,6 @@ body {
 	vertical-align: middle;
 	font-size: 2em;
 	cursor: pointer;
-	margin: 0;
-	padding: 0;
 	color: #1e824c;
   }
 
@@ -551,6 +550,8 @@ body {
 	font-size: .75em;
 	cursor: pointer;
 	letter-spacing: 0.05em;
+	margin: 0;
+	padding: 0;
 }
 
 /*
@@ -661,6 +662,16 @@ body {
 
 
 */
+
+/* Display this when there are no cards*/
+.no-cards{
+	height: 100%;
+	width: 100%;
+	padding-top: 14vw;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color:rgba(47,79,79,0.50);
+}
 
 /*Settings for scrolling box*/
 .content {

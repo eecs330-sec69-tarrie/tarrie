@@ -243,6 +243,12 @@ function getFormat(club){
  	return formatt;
 }
 
+function noCards(text){
+	return `<div class="no-cards">
+		<h2 style="margin:0;padding:0;"> ${text} </h2>
+	</div>`; 
+}
+
 /*********** Reactive Functions ***************/
 activehandles =[];
 
@@ -268,7 +274,11 @@ function all_groups(){
 
 	/*Add new shit*/
 	var groupblock = document.getElementById("block-group");
-	groupblock.innerHTML = formatt;
+	if (formatt==""){
+		groupblock.innerHTML = noCards('No Groups');
+	}else{
+		groupblock.innerHTML = formatt;
+	}
 	return active; 
 }
 
@@ -288,7 +298,11 @@ function owner_admin(){
 
 	/*Add new shit*/
 	var groupblock = document.getElementById("block-group");
-	groupblock.innerHTML = formatt;
+	if (formatt==""){
+		groupblock.innerHTML = noCards('Not an Owner/Admin of any Group'); 
+	}else{
+		groupblock.innerHTML = formatt;
+	}
 	return active; 
 
 
@@ -310,7 +324,11 @@ function favorites(){
 
 	/*Add new shit*/
 	var groupblock = document.getElementById("block-group");
-	groupblock.innerHTML = formatt;
+	if (formatt==""){
+		groupblock.innerHTML = noCards('No Favorite Groups'); 
+	}else{
+		groupblock.innerHTML = formatt;
+	}	
 	return active; 
 }
 
@@ -330,7 +348,11 @@ function following(){
 
 	/*Add new shit*/
 	var groupblock = document.getElementById("block-group");
-	groupblock.innerHTML = formatt;
+	if (formatt==""){
+		groupblock.innerHTML = noCards('Not Following any Groups'); 
+	}else{
+		groupblock.innerHTML = formatt;
+	}
 	return active; 
 }
 
@@ -426,11 +448,14 @@ function initCategories(){
 /* global variable defined elsewhere for this is `is_favoirtesON`*/
 
 function togglefav(handle){
-	console.log(handle);
+	//console.log(handle);
 	pic = "#"+handle+" "+"#favs-icon img"
 	picid = document.querySelectorAll(pic)[0]
-	console.log(picid);
+	//console.log(picid);
+
+	is_favsPresent = false; 
 	for (let i = 0; i<clubList.length; i++){
+
 
 		if (clubList[i].group.handle == handle){
 			prevfav = clubList[i].fav; 
@@ -441,14 +466,22 @@ function togglefav(handle){
 			/*Check if `favorites` tab` is selected, */
 			favs = document.getElementById("favorites");
 			if (is_favoritesOn && prevfav==1){
-				console.log(favs.style["border-bottom-color"]);
+				//console.log(favs.style["border-bottom-color"]);
 				document.getElementById(handle).outerHTML="";
 			}
-
-			return; 
 		}
+		//If atleast one group card has `favs` then is_favsPresent == true
+		if (clubList[i].fav && !is_favsPresent){
+			is_favsPresent = true;
+		}
+
 	}
- 
+	/*Display a splash screen when no cards left in fav's*/
+	if (!(is_favsPresent)){
+		document.getElementById("block-group").innerHTML = noCards('No Favorite Groups');
+	}
+	return;
+
 }
 
 

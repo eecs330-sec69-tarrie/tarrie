@@ -351,10 +351,10 @@
 
 						  <!--Search bar and calender icon  -->
 						 <div class="event-strip">
-							 <div class="group-event-searchbar">
-							 	<ion-icon name="search"></ion-icon>
-							 	<span class="search"> Search ... </span>
-							 </div>
+								 <div class="group-event-searchbar">
+								 	<ion-icon name="search"></ion-icon>
+								 	<span class="search"> Search ... </span>
+								 </div>
 
 							 <a href="calendar.html" style="color:inherit;">
 								 <div class="event-calender"  onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')">
@@ -363,9 +363,19 @@
 							 	</div>
 						 	</a>
 						 </div> 
+
 					 </div>
 
-
+					 <!--Container to holds the group cards  -->
+					<div class="group-card-holder">
+						<div class="content" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+							<div class="block" id="block-card" >
+								<div class="no-cards">
+									<h2 style="margin:0;padding:0;"> No Upcoming Events </h2>
+								</div>
+							</div>
+						</div>
+					</div>
 
 				</div>
 
