@@ -1,68 +1,231 @@
 body {
 	/*background-image: url("images/iphoneOL.jpg");*/
 	font-family: Palatino, sans-serif;
-	font-size:1.3vw;
-
+	font-size:1.5vw;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
 
 }
 
+#screen {
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	
+}
+
+/******************* top line of the page (logo + options) ************/
+.head-top {
+	margin-bottom: 1em;
+	border-bottom: .05em solid rgba(136,136,136,0.50);
+	width:100%;
+	height:4vw;
+	color: #1e824c;
+	color:rgba(0, 100, 0,1);
+}
+
+.name {
+	display:inline-block;
+	font-size: 2em;
+	font-family: Montserrat;
+	text-align: left;
+	width: 94%;
+	letter-spacing: 0.1em;
+	margin-left: .4em;
+
+}
+
+.menu-option{
+	color: #1e824c;
+	font-size:2.3em;
+	margin:0;
+	padding:0;
+}
+
+/************************** User part of the page**********/
+
+
+#smaller-screen {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 97%;
+	height: 90%;
+	margin-top:-1em;
+	
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	
+}
+
+
+#head-bar {
+	display: block;
+	color: black;
+	background-color: white;
+	height: 15vw;
+	width: 83vw;
+	font-size: 1em;
+	padding-top: .8em;
+	padding-left: 1em;
+	padding-bottom: .4em;
+	margin-bottom: 3em; 
+	padding-right: 4em;
+	padding-right: 4em;
+	margin-left: 2.5em;
+	margin-right: 3em;
+
+	font-family: Montserrat;
+	border: 1px solid rgba(136,136,136,0.40);
+
+	box-shadow: 0em 0em 1em 0em rgba(136,136,136,0.75);
+	
+
+}
+
+
+
+
+.avatar{
+	float: left;
+	padding:0;
+	margin-right: 4em;
+	padding-right: 2em;
+	width: 7em;
+	height: 6em;
+	margin:0;
+	display:inline-block;
+}
+
+.avatar img{
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: .05em solid rgba(136,136,136,0.50);
+}
+
+.user-name{
+	font-size:6em; 
+}
+
+
+
+.email-header{
+	color:rgba(47,79,79,0.50);
+}
+
+
+.handle-header{
+	margin-right:0;
+	margin-left:27.3em;
+	color:rgba(47,79,79,0.50);
+}
+
+
+#edit-profile{
+	margin-top: 1.3em;
+	margin-right: 0; 
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: lighter;
+	color: #1e824c; 
+	vertical-align: middle;
+	padding-left: 1em;
+	font-size:1em;
+
+}
+
+.user-handle{
+	margin-right: 0;
+	margin-left:22em;	
+}
+
+.user-identifiers{
+	font-family: Montserrat;
+	font-size:.7em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+
+
+/********************** The two big buttons for create group + event ************************************/
+
+.groupevent_button{
+	height: 5vw;
+	width: 100%;
+	margin-bottom: 5.5vw;
+	margin-top: .5em;
+
+}
 
 /** The Group and Event Button */
-#group-event-button {
-	color:black;
-}
 
-.create-group-event ion-icon {
+ #event-button ion-icon {
   vertical-align: middle;
-  	padding-left: .75em;
-	padding: 0;
-	width: 20%;
-	height: 130%;
-	margin-left: 10%;
+  	padding-left: 1em;
+  	padding-right: 0;
+  	color: #1e824c; 
+	font-size: 3em;
+  }
+
+ #group-button ion-icon {
+  vertical-align: middle;
+  	padding-left: .8em;
+  	padding-right: 0;
 	color: #1e824c; 
+	font-size: 3em;
   }
 
 
-#group-button-format{
+#group-button{
+	vertical-align: middle;
 	/*Rounded Corners*/
 
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
-	padding-bottom: 1.2em; 
 
+
+	width: 40vw;
+	margin-left: 3vw;
+	margin-right: 3vw;
+
+	padding-bottom: .4em; 
 	padding-top: .4em; 
-	width: 40%;
-	height: 8%;
-	display:inline-block;
-	margin-left: 2em;
-	margin-right: 4em;
-	padding-left: 1.1em;
-	padding-right: 1.1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	height: 5vw;
+
 
 	text-shadow: .04em .04em  rgba(136,136,136,0.75); 
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
+	background-color: white;
+
 }
 
 
-#event-button-format{
+#event-button{
+	vertical-align: middle;
 	/*Rounded Corners*/
-	margin-top: 1em;
 
 	border-radius: 4em;
 	/*border: 0.5px solid rgba(136,136,136,0.50);*/
-	padding-bottom: 1.2em; 
-
-	padding-top: .4em; 
-	width: 40%;
-	height: 8%;
-	display:inline-block;
+	padding-top: .4em;  
+	padding-bottom: .4em; 
+	width: 40vw;
 	padding-left: 1em;
-	margin-right: 4em;
-	padding-right: 1.1em;
+	padding-right: 1em;
+	height: 5vw;
+
 	box-shadow: .1em .1em .15em .1em rgba(136,136,136,0.75); 
 	text-shadow: .04em .04em rgba(136,136,136,0.75); 
+	background-color: white;
 
 }
+
 
 .group-event-name{
 	width:40%;
@@ -76,6 +239,145 @@ body {
   	letter-spacing: 0.05em;
 }
 
+/************** Horizontal alligned button for mail box, contacts, alerts **********/
+
+.horiz-button-body{
+	height: 4vw;
+	width: 64vw;
+	padding-top: 0;
+	padding-right: 0em;
+
+	margin-bottom: 0em;
+	margin-top:-1.4em;
+	margin-left: 9em;
+
+}
+
+
+
+.mail{
+	width: 25%;
+	height: 100%;
+	margin-left: 0;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+    border-radius: .8em;
+
+}
+
+.contacts{
+	width: 25%;
+	height: 100%;
+	margin-left: 9.9%;
+    border-radius: .8em;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+	border: .01em solid rgba(136,136,136,0.75);
+}
+
+.alerrts{
+	width: 25%;
+	height: 100%;
+	margin-left: 9.9%;
+	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+    border-radius: .8em;
+
+}
+
+.horiz-button-icon-body{
+    border-radius: .8em 0em 0em .8em;
+}
+
+
+.mail ion-icon{
+	color: white;
+	font-size: 1.8em;
+	margin-top: .16em;
+
+
+}
+
+.contacts ion-icon{
+	color: white;
+	font-size: 1.8em;
+	margin-top: .16em;
+
+}
+
+.alerrts ion-icon{
+	color: white;
+	font-size: 1.8em;
+	margin-top: .16em;
+
+}
+
+.horiz-button-icon-txt{
+	vertical-align: middle;
+	font-family: Montserrat, sans-serif;
+	font-size: .8em;
+	text-align: center;
+	padding-bottom:2em;
+	padding-top: .25em;
+
+}
+
+.mail .horiz-button-icon-txt{
+	padding-left: .1em;
+	letter-spacing: 0.1em;
+
+
+}
+.alerrts .horiz-button-icon-txt{
+	/*padding-left: .7em;*/
+	padding-left: .6em;
+	letter-spacing: 0.1em;
+
+}
+
+.contacts .horiz-button-icon-txt{
+	/*padding-left: .7em;*/
+	letter-spacing: 0.05em;
+}
+
+/*THIS IS TO GIVE INDICATION OF UNREAD Mail/Alerts/New Contacts and shit*/
+.notification{
+	background-color: white;
+	height: 1.2em;
+	width: 1.2em;
+	line-height: 1.2em;
+	font-size: .8em;
+	border-radius: 5em;
+	vertical-align: middle;
+	color:rgb(112,128,144);
+	margin: 0;
+	margin-bottom: 1.5em;
+	margin-right: .24em;
+
+
+}
+
+
+
+.mail .horiz-button-icon-body{
+	height:100%;
+	width: 45%;
+	background-color:rgba(131,52,113,.75);
+
+	text-align: center;
+}
+.contacts .horiz-button-icon-body{
+	height:100%;
+	width: 45%;
+	background-color:rgba(	30,130,76,.78);
+	text-align: center;
+}
+
+.alerrts .horiz-button-icon-body{
+	width: 45%;
+	height:100%;
+	text-align: center;
+	background-color:rgba(205,92,92,.78);
+
+}
+
 
  /***********HEADER FOR THE CARDS***************/
 .groups-body{
@@ -83,50 +385,67 @@ body {
 
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
-	padding-bottom: 1.5em; 
-	padding-top: 0; 
-	width: 40%;
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
 
 	/*height: 8%;*/
-	display:inline-block;
-	margin-left: 1.8em;
-	margin-right: 4em;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-bottom: 0vw; 
+	padding-top: 0; 
+	width: 39vw;
+	margin-left: 3vw;
+	margin-right: 3vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-top: 0;
+	height:55vw;
+	margin-bottom: 0;
+
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
-
-
+	background-color: rgba(255, 255, 255,1);
+	flex: 1;
+	
 }
 
 
 .event-body{
 	/*Rounded Corners*/
-	margin-top: 2em;
 
 	border-radius: .2em;
 	border: 0.05em solid rgba(136,136,136,0.50);
-	padding-top: 0; 
-	width: 40%;
 	box-shadow: 0em 0em .3em 0em rgba(136,136,136,0.75);
+
+
+	margin-top: 0;
+	padding-top: 0; 
+	width: 39vw;
+	height:55vw;
+
 
 	/*height: 8%;*/
 	display:inline-block;
-	padding-left: 1em;
-	padding-right: 1em;
-	margin-left: .4em;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-left: 0;
 
 	/*Flex container parameters-- so the box grows down w/ children*/
 	display: inline-flex;
 	flex-direction: column;
+	background-color: rgba(255, 255, 255,1);
+	overflow: auto;
+	flex: 1;
+
 }
 
 .group-event-header{
+	width: 99%;
+	display:inline-block;
+	vertical-align: middle;
 	padding-bottom: 1em;
 	margin-bottom: 2em; 
 	border-bottom: 0.05em solid rgba(0,0,0,0.4);
+	background-color: rgba(255, 255, 255,1);
+
 }
 
 
@@ -139,14 +458,10 @@ body {
 	letter-spacing: 0.05em;
 	padding-bottom: 0; 
 	margin-bottom: .25em;
-}
-
-
-.group-event-header{
-	display:inline-block;
-	vertical-align: middle;
+	background-color: rgba(255, 255, 255,1);
 
 }
+
 
 
 .group-class-options{
@@ -223,9 +538,8 @@ body {
 .event-calender ion-icon{
 	width: 1em;
 	height: 1em;
-	line-height: 50px;
 	vertical-align: middle;
-	font-size: 40px;
+	font-size: 2em;
 	cursor: pointer;
 	margin: 0;
 	padding: 0;
@@ -246,6 +560,24 @@ body {
 }*/
 /******** Formatting Owner and Admin Icon and Profile PIc*******/
 
+#favs-icon{
+	width: 10%;
+	height:90%;
+	line-height: 4em;
+	margin:0;
+	margin-left: 48%;
+	padding:0;
+	vertical-align: middle;
+	cursor: pointer;
+
+}
+#favs-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
 
 #owner-icon {
 	padding: 0em;
@@ -263,9 +595,9 @@ body {
 
 #admin-icon {
 	padding: 0px;
-	width: 50px;
-	height: 53px;
-	line-height: 50px;
+	width: 5em;
+	height: 5em;
+	line-height: 5em;
 }
 
 #admin-icon img{
@@ -276,6 +608,41 @@ body {
     width: 100%;
     border-radius: 50%;
  }
+
+
+.priviledge-lvl{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: .60em; 
+	text-align: center; 
+	//width: 4em;
+	height: 60%;
+	color: rgba(0,0,0,0.60);
+	letter-spacing: 0.04em;
+	vertical-align: middle;
+	float: right;
+	margin:0;
+	//border: solid;
+	margin-top: 1em;
+	//margin-right: 1.5em;
+	padding:0;
+
+}
+
+
+.group-footer{
+	//padding-top: .4em;
+	width: 100%; 
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(0,0,0,.2);
+	//padding-bottom: .0;
+	height: 2.5em;
+	border-top: .05em solid rgba(0,0,0,0.2);
+	//border: solid;
+	//margin-bottom: .4em;
+	padding:0;
+	margin:0;
+}
 
 /*********** The individual group cards********************/
 
@@ -294,18 +661,67 @@ body {
 
 
 */
-.group-card-holder{
-	//border: 1px solid rgba(136,136,136,0.50);
-	//display: inline-flex;
-	//flex-direction: column;
-	width: 100%;
+
+/*Settings for scrolling box*/
+.content {
+  display: inline-flex;
+  flex-direction: column;
+  overflow: scroll;
+
+} 
+
+.block{
+  height: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  width: 100%;
 }
 
-.group-card{
-	width: 100%;
-	border: 1px solid rgba(136,136,136,0.50);
-	border-radius: 2px 2px 2px 2px;
+.content::-webkit-scrollbar {
+    width: 1px;  /* Remove scrollbar space */
+    //background: transparent;  /* Optional: just make scrollbar invisible */
 }
+/* Optional: show position indicator in red */
+.content::-webkit-scrollbar-thumb {
+    background: transparent;  /* Optional: just make scrollbar invisible */
+    width: 0px;  /* Remove scrollbar space */
+    display: none;
+    color: rgba(136,136,136,0.50);
+}
+
+
+.group-card-holder{
+	/*display: inline-flex;*/
+	height:35vw;
+	flex-direction: column;
+    display: flex;
+	border: .05em solid rgba(136,136,136,0.50);
+	width: 36vw;
+
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 1em;
+	margin-left:.3vw;
+
+}
+
+
+.group-card{
+	width: 99%;
+	border: .05em solid rgba(136,136,136,0.50);
+	border-radius: .5em;
+	margin-bottom: 1em;
+	background-image: url("./images/cream_dust.png");*/
+	background-repeat: repeat-x repeat-y;
+	box-shadow: 0 .1em .1em 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.group-card:hover {
+	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
+}
+
 .group-header{
 	padding-top: 0.1em;
 	float: center; 
@@ -330,7 +746,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    border: 1px solid rgba(136,136,136,0.50);
+    border: .05em solid rgba(136,136,136,0.50);
 }
 
 .group-txt-info{
@@ -340,7 +756,7 @@ body {
 	font-weight: 'semi-bold';
 	margin:0;
 	padding:0;
-	padding-top: 4px;
+	padding-top: .2em;
 	vertical-align: middle;
 }
 
@@ -359,38 +775,8 @@ body {
 	font-size: 1em; 
 }
 
-.owner-icon{
-	margin:0;
-	padding: 0;
-}
 
-.priviledge-lvl{
-	font-family: 'Open Sans', sans-serif;
-	font-style: italic;
-	font-size: .60em; 
-	text-align: center; 
-	//width: 4em;
-	height: 50%;
-	color: rgba(0,0,0,0.60);
-	letter-spacing: 0.04em;
-	vertical-align: middle;
-	float: right;
-	margin:0;
-	margin-top: 1em;
-	//margin-right: 1.5em;
-}
 
-.group-footer{
-	padding-top: .4em;
-	width: 100%; 
-	font-family: 'Open Sans', sans-serif;
-	color: rgba(0,0,0,.2);
-	padding-bottom: .4em;
-	height: 1.8em;
-	border-top: 1px solid rgba(0,0,0,0.2);
-
-	margin-bottom: .4em;
-}
 
 .manager{
 	vertical-align: middle;
@@ -403,7 +789,7 @@ body {
 	text-shadow: .03em .03em rgba(136,136,136,0.75);
 
 	border-radius: 4em 4em 4em 4em;
-	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	box-shadow: 0px .1em 0px 0px rgba(220,220,220,.5);
 	cursor: pointer; 
 	padding-bottom: .2em;
 	padding-top: .2em;
@@ -414,8 +800,10 @@ body {
 .chat{
 	vertical-align: middle;
 	margin-right:0;
-	margin-left: 20%;
+	margin-left: 3%;
+	margin-top: .5%;
 	letter-spacing: 0.07em;
+	height: 60%;
 	width: 30%;
 	text-align: left;
 	padding-left: 1em;
@@ -423,13 +811,29 @@ body {
 	text-shadow: .03em .03em rgba(136,136,136,0.75);
 
 	border-radius: 4em 4em 4em 4em;
-	box-shadow: 0px 1.4px 0px 0px rgba(220,220,220,.5);
+	box-shadow: 0px .1em 0px 0px rgba(220,220,220,.5);
 	cursor: pointer; 
 	padding-bottom: .2em;
 	padding-top: .2em;
-	background-color: rgba(252, 252, 252,1);
+	background-color: rgba(255, 252, 252,1);
 
 }
+
+.blank-chat{
+	vertical-align: middle;
+	margin-right:0;
+	margin-left: 3%;
+	margin-top: .5%;
+	height: 60%;
+	width: 30%;
+	padding-left: 1em;
+	cursor: default; 
+	padding-bottom: .2em;
+	padding-top: .2em;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+}
+
 
 .alerts{
 	width:2em;
@@ -444,7 +848,7 @@ body {
 	background-color: rgba(49, 139, 89,.8);
 	color:rgba(255,255,255, .8);
 	text-shadow: .04em .04em rgba(255,255,255, .8);
-	box-shadow: 0px 1px 0px 0px rgba(136,136,136,0.75);
+	box-shadow: 0px .05em 0px 0px rgba(136,136,136,0.75);
 	margin-bottom: .1em;
 }
 
@@ -458,126 +862,14 @@ body {
 /************************************************************/
 
 
-#screen {
-	margin:0;	
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	margin-bottom: 0;
-
+.footer{
+	width: 100%; 
+	height: 1%;
+	background-image: url("./images/cream_dust.png");
+	background-repeat: repeat-x repeat-y;
+	margin-top:1em;
+	padding: 0;	
 }
-
-#smaller-screen {
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: white;
-	width: 97%;
-	height: 90%;
-	margin-top:-1em;
-}
-
-#head-bar {
-	display: block;
-	color: black;
-	background-color: white;
-	height: 30%;
-	width: 82%;
-	font-size: 20px;
-	padding-top: 1em;
-	padding-left: 1em;
-	padding-bottom: auto;
-	margin-bottom: 3em; 
-	margin-left: 2em;
-	padding-right: 4em;
-	font-family: Montserrat;
-	border: 1px solid rgba(136,136,136,0.40);
-	padding-right: 4em;
-	box-shadow: 0em 0em 1em 0em rgba(136,136,136,0.75);
-}
-
-.name {
-	display:inline-block;
-	font-size: 2em;
-	font-family: Montserrat;
-	text-align: left;
-	width: 90%;
-	letter-spacing: 0.1em;
-	margin-left: .5em;
-
-}
-
-.head-top {
-	margin-bottom: 1em;
-	border-bottom: 1px solid rgba(136,136,136,0.50);
-	width:100%;
-	height:10%;
-	color: #1e824c;
-	color:rgba(0, 100, 0,1);
-}
-
-.avatar{
-	float: left;
-	padding:0;
-	margin-right: 4em;
-	padding-right: 2em;
-	width: 6em;
-	height: 6em;
-	margin:0;
-	display:inline-block;
-}
-
-.avatar img{
-    margin: 0 auto;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    border: 1px solid rgba(136,136,136,0.50);
-}
-
-.user-name{
-	font-size:6em; 
-}
-
-.menu-option{
-	color: #1e824c;
-	font-size:2em;
-}
-
-
-.email-header{
-	color:rgba(47,79,79,0.50);
-}
-
-
-.handle-header{
-	margin-right:0;
-	margin-left:25em;
-	color:rgba(47,79,79,0.50);
-}
-
-
-#edit-profile{
-	margin-top: 1.3em;
-	margin-left: -7.3em; 
-	margin-right: 0; 
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: lighter;
-	color: #1e824c; 
-}
-
-.user-handle{
-	margin-right: 0;
-	margin-left:35em;	
-}
-
-.user-identifiers{
-	font-family: Montserrat;
-	font-size:.5em;
-}
-
-
-
 
 
 

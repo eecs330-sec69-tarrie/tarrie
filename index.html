@@ -15,7 +15,7 @@
 						<b>Tarri&#x0113;</b>
 					</div>
 
-					<div class="menu-option" style="float:right;display:inline-block">
+					<div class="menu-option" style="display:inline-block">
 						<ion-icon name="menu"></ion-icon>
 					</div>
 				</div>
@@ -28,54 +28,78 @@
 					<div id="user-name" style="text-align:left;">
 						<i>Becky Tousilienie</i>
 					</div>
-					<div style="font-size: 10px;text-align:left;">
+					<div style="font-size: .65em;text-align:left;">
 						10 posted events &#8226; following 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
 					</div>
 					<hr style="margin-left:10%;margin-right:10%;">
 					
 					<span class="email-header"> email</span>
-					<span class="handle-header"> handle</span>
+					<span class="handle-header"> user name</span>
 
 					<div class="user-identifiers">
 						<span class="user-email">beckytousilienie2021@u.northwestern.edu</span>
 						<span class="user-handle">becky_t_95</span>
 					</div>
-
-
-
 					
-					<!--<div style="display:inline;text-align:left;float:left;border:1px solid red;">
-						Handle<br>
-						jide_anene
-					</div>-->
-					<div id="edit-profile" style="display:inline-block">
-						Edit Profile
+					<a href="#" style="color:inherit;text-decoration:none">
+						<div id="edit-profile" >
+							Edit Profile
+						</div>
+					</a>
+
+					<!-- Strip that holds the mail button, alerts button, contacts-->
+					<div class="horiz-button-body"  style="display:inline-block;">
+						<!--Mail box: Purple-->
+						<div class="mail" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="mail"></ion-icon>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Mail</div>
+						</div>
+
+						<!--Contacts: Blue-->
+						<div class="contacts" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="people"></ion-icon>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Contacts</div>
+						</div>
+
+						<!--Alerts: Color Orange-->
+						<div class="alerrts" style="display:inline-block;">
+							<div class="horiz-button-icon-body" style="display:inline-block;">
+								<ion-icon name="notifications-outline"></ion-icon>
+								<div class="notification" style="display:inline-block;"> 2 </div>
+							</div>
+							<div class="horiz-button-icon-txt" style="display:inline-block;"> Alerts</div>
+						</div>
 					</div>
+
+
 				</div>
 
 			<div id="smaller-screen">
 
-				<!--Container to hold the button for creating a group  -->
-				<div id="group-event-header">
-					<a id="group-event-button" href="#" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
-						<div id="group-button-format" class="create-group-event">
-							<ion-icon name="add"></ion-icon>
-							<span class="group-event-name"> Create Group</span>
-						</div>
-					</a>
-
-				<!--Container to hold the button for creating a event  -->
-					<a id="group-event-button" href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')">
-						<div id="event-button-format" class="create-group-event">
-							<ion-icon name="add"></ion-icon>
-							<span class="group-event-name">Create Event</span>
-						</div>
-					</a>
+				<div class="groupevent_button" style="display:inline-block;">
+					<!--Container to hold the button for creating a group  -->
+					<div id="group-button" style="display:inline-block;">
+						<ion-icon style="display:inline-block;" name="add"></ion-icon>
+						<span class="group-event-name"> Create Group</span>
+					</div>
+						
+					<!--Container to hold the button for creating a event  -->
+						<!--<a href="#" onmousedown="group_event_button_down('event')" onmouseup="group_event_button_up('event')" style="color:inherit;text-decoration:none">
+						</a>-->
+					<div id="event-button" style="display:inline-block;">
+						<ion-icon style="display:inline-block;" name="add"></ion-icon>
+						<span class="group-event-name">Create Event</span>
+					</div>
 				</div>
+
 
 				<!--Container to hold body for scrollanble group cards  -->
 				<div class="groups-body">
-					<div class="group-event-header">
+					<div class="group-event-header" id ="group-event-header">
 						 <!--Text and clickable options that are underlined w/ green -->
 						 <h1 class="group-event-header-txt">Groups</h1>
 						 <div class="group-class-options"> 
@@ -95,73 +119,227 @@
 					</div>
 
 					 <!--Container to holds the group cards  -->
-					 <div class="group-card-holder">
-					 	
-					 	<div id="devClub_nu" class="group-card">
-					 		<!--Header of a group card-->
-						 	<div class="group-header">
-						 		<div class ="profile-pic-small">
-									<img src = "./images/devclub.png">
-								</div>
-
-								<div class = "group-txt-info">
-									<div class="group-handle">
-										devClub_nu
-									</div>
-									<div class="group-txt-footer">
-										<div class="group-desc">
-											Northwestern's Software Development Club
+					<div class="group-card-holder">
+						<div class="content" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+							<div class="block" id="block-group" >
+							 	<!--Start: Group Card-->
+							 	<div id="devClub_nu" class="group-card">
+							 		<!--Header of a group card-->
+								 	<div class="group-header">
+								 		<div class ="profile-pic-small">
+											<img src = "./images/devclub.png">
 										</div>
-										<div class="group-loc">
-											<span class>
-												Evanston &#183; IL  &#183; USA
-											</span>
-										</div>	
+
+										<div class = "group-txt-info">
+											<div class="group-handle">
+												devClub_nu
+											</div>
+											<div class="group-txt-footer">
+												<div class="group-desc">
+													Northwestern's Software Development Club
+												</div>
+												<div class="group-loc">
+													<span class>
+														Evanston &#183; IL  &#183; USA
+													</span>
+												</div>	
+											</div>
+										</div>
+
+										<div class="priviledge-lvl">
+											<div id="owner-icon">
+												<img src="./images/owner.png" alt="owner">
+											</div>	
+											Owner
+										</div>
+
+
+								 	</div>
+								 	<!--footer of a group card-->
+									<div class="group-footer">
+										<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+									    	<div class="chat" id="chat" style="display: inline-block;">
+									    		Chat
+									    		<div class="alerts" style="display: inline-block;">
+									    			2
+									    		</div>
+									    	</div>
+									    </a>
+
+								    	<div id="favs-icon" style="display: inline-block;">
+											<img  src="./images/star.svg" alt="Fav">
+										</div>
+
+
 									</div>
-								</div>
+							 	</div>
+							 	<!-- End: Group Card-->
 
-								<div class="priviledge-lvl">
-									<div id="owner-icon">
-										<img src="./images/owner.png" alt="owner">
-									</div>	
-									Owner
-								</div>
+							 	<!--Start: Group Card-->
+							 	<div id="devClub_nu" class="group-card">
+							 		<!--Header of a group card-->
+								 	<div class="group-header">
+								 		<div class ="profile-pic-small">
+											<img src = "./images/devclub.png">
+										</div>
 
+										<div class = "group-txt-info">
+											<div class="group-handle">
+												devClub_nu
+											</div>
+											<div class="group-txt-footer">
+												<div class="group-desc">
+													Northwestern's Software Development Club
+												</div>
+												<div class="group-loc">
+													<span class>
+														Evanston &#183; IL  &#183; USA
+													</span>
+												</div>	
+											</div>
+										</div>
+
+										<div class="priviledge-lvl">
+											<div id="owner-icon">
+												<img src="./images/cream_dust.png" alt="general">
+											</div>	
+										</div>
+
+								 	</div>
+								 	<!--footer of a group card-->
+									<div class="group-footer">
+
+										<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+									    	<div class="chat" id="chat" style="display: inline-block;">
+									    		Chat
+									    		<div class="alerts" style="display: inline-block;">
+									    			2
+									    		</div>
+									    	</div>
+									    </a>
+
+
+								    	<div id="favs-icon" style="display: inline-block;">
+											<img  src="./images/star.svg" alt="Fav">
+										</div>
+									</div>
+							 	</div>
+							 	<!-- End: Group Card-->
+
+							 	<!--Start: Group Card-->
+							 	<div id="devClub_nu" class="group-card">
+							 		<!--Header of a group card-->
+								 	<div class="group-header">
+								 		<div class ="profile-pic-small">
+											<img src = "./images/devclub.png">
+										</div>
+
+										<div class = "group-txt-info">
+											<div class="group-handle">
+												devClub_nu
+											</div>
+											<div class="group-txt-footer">
+												<div class="group-desc">
+													Northwestern's Software Development Club
+												</div>
+												<div class="group-loc">
+													<span class>
+														Evanston &#183; IL  &#183; USA
+													</span>
+												</div>	
+											</div>
+										</div>
+
+										<div class="priviledge-lvl">
+											<div id="owner-icon">
+												<img src="./images/owner.png" alt="owner">
+											</div>	
+											Owner
+										</div>
+
+								 	</div>
+								 	<!--footer of a group card-->
+									<div class="group-footer">
+
+										<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+									    	<div class="chat" id="chat" style="display: inline-block;">
+									    		Chat
+									    		<div class="alerts" style="display: inline-block;">
+									    			2
+									    		</div>
+									    	</div>
+									    </a>
+
+
+								    	<div id="favs-icon" style="display: inline-block;">
+											<img  src="./images/star.svg" alt="Fav">
+										</div>
+									</div>
+							 	</div>
+							 	<!-- End: Group Card-->
+
+							 	<!--Start: Group Card-->
+							 	<div id="devClub_nu" class="group-card">
+							 		<!--Header of a group card-->
+								 	<div class="group-header">
+								 		<div class ="profile-pic-small">
+											<img src = "./images/devclub.png">
+										</div>
+
+										<div class = "group-txt-info">
+											<div class="group-handle">
+												devClub_nu
+											</div>
+											<div class="group-txt-footer">
+												<div class="group-desc">
+													Northwestern's Software Development Club
+												</div>
+												<div class="group-loc">
+													<span class>
+														Evanston &#183; IL  &#183; USA
+													</span>
+												</div>	
+											</div>
+										</div>
+
+										<div class="priviledge-lvl">
+											<div id="owner-icon">
+												<img src="./images/owner.png" alt="owner">
+											</div>	
+											Owner
+										</div>
+
+								 	</div>
+								 	<!--footer of a group card-->
+									<div class="group-footer">
+
+										<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
+									    	<div class="chat" id="chat" style="display: inline-block;">
+									    		Chat
+									    		<div class="alerts" style="display: inline-block;">
+									    			2
+									    		</div>
+									    	</div>
+									    </a>
+
+
+								    	<div id="favs-icon" style="display: inline-block;">
+											<img  src="./images/star.svg" alt="Fav">
+										</div>
+
+									</div>
+							 	</div>
+							 	<!-- End: Group Card-->
 						 	</div>
-						 	<!--footer of a group card-->
-							<div class="group-footer">
-						    	<a href="#" style="color:inherit;" onmousedown="click_down('manager',true)" onmouseup="click_up('manager',true)">
-							    	<div class="manager" id="manager" style="display: inline-block;">
-							    		Manage
-							    		<div class="alerts" style="display: inline-block;">
-							    			3
-							    		</div>
-							    	</div>
-						    	</a>
-
-								<a href="#" style="color:inherit;" onmousedown="click_down('chat',true)" onmouseup="click_up('chat',true)">
-							    	<div class="chat" id="chat" style="display: inline-block;">
-							    		Chat
-							    		<div class="alerts" style="display: inline-block;">
-							    			2
-							    		</div>
-							    	</div>
-							    </a>
-							</div>
-
-					 	</div>
-
-
-
-
+						</div>
 					 </div>
 				</div>
 
 
 
-				<div class="event-body">
+				<div class="event-body" >
 
-					<div class="group-event-header">
+					<div class="group-event-header" id ="group-event-header">
 						<!--Text and clickable options that are underlined w/ green -->
 						 <h1 class="group-event-header-txt">Upcoming Events</h1>
 						 <div class="group-class-options"> 
@@ -191,16 +369,10 @@
 
 				</div>
 
-				<!--
-				<div id="owner-icon">
-					<img src="./images/owner.png" alt="owner">
-				</div>
 
-				<div id="admin-icon">
-					<img src="./images/admin.png" alt="admin">
-				</div>-->
-
+				<div class="footer" id="footer"> </div>
 			</div>
+
 		</div>
 
 
@@ -210,6 +382,16 @@
 			document.getEleementById("create-button").style.color = "#0B610B";
 		}
 		initCategories();
+	</script>
+
+	<script>
+		/*Initialize the sample group cards*/
+		initGroupCards(); 
+		/*Set up the default active groups, this is so the general default_group can run on any default input*/
+		default_groups(); 
+
+		/*set up default to be owner_admin*/
+		getGroups("owner_admin"); 
 	</script>
 
 
