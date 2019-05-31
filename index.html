@@ -41,9 +41,9 @@
 						<span class="user-handle">becky_t_95</span>
 					</div>
 					
-					<a href="#" style="color:inherit;text-decoration:none">
-						<div id="edit-profile" >
-							Edit Profile
+					<a href="manage.html" style="color:inherit;text-decoration:none">
+						<div id="edit-profile" style="color:#1e824c;">
+							<b>Manage Profile</b>
 						</div>
 					</a>
 
@@ -351,10 +351,10 @@
 
 						  <!--Search bar and calender icon  -->
 						 <div class="event-strip">
-								 <div class="group-event-searchbar">
-								 	<ion-icon name="search"></ion-icon>
-								 	<span class="search"> Search ... </span>
-								 </div>
+							 <div class="group-event-searchbar">
+							 	<ion-icon name="search"></ion-icon>
+							 	<span class="search"> Search ... </span>
+							 </div>
 
 							 <a href="calendar.html" style="color:inherit;">
 								 <div class="event-calender"  onmousedown="click_down('calender-icon')" onmouseup="click_up('calender-icon')">
@@ -362,20 +362,40 @@
 							 		<span class="calendar-txt"> View Calendar</span>
 							 	</div>
 						 	</a>
-						 </div> 
+						 	<!--Container for the events cards-->
+						 	<div class="event-card-holder">
+						 		<div class="content" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+						 			<div class="block" id="block-group" >
+						 				<div id="Event1" class="event-card" >
+						 					<div class="event-border">
+						 						<b>May</b><br/>
+						 						<b>06</b>
+						 					</div>
+						 					<div class="img-container">
+						 						<div class="event-image">
+						 							<img data-gifffer="./images/homer.gif" data-gifffer-height="100%" data-gifffer-width="100%" style="border-radius: .5em;"/>
+						 						</div>
+						 					</div>
+						 					<div class="event-title">
+						 						<b>Homer's Party</b><br/>
+						 					</div>
+						 					<div class="event-info">
+						 						<!--<i class="material-icons" style="height:5px;">place</i>-->The Simpsons House<br/>
+						 					</div>
+						 					<div class="event-grouplocation">
+						 						742 Evergreen Terrace<br/>
+						 					</div>
+						 				</div>
+						 				<div id="Event2" class="event-card">
+						 				</div>
+						 			</div>
+						 		</div>
+						 	</div>
+						 </div>
 
 					 </div>
 
-					 <!--Container to holds the group cards  -->
-					<div class="group-card-holder">
-						<div class="content" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
-							<div class="block" id="block-card" >
-								<div class="no-cards">
-									<h2 style="margin:0;padding:0;"> No Upcoming Events </h2>
-								</div>
-							</div>
-						</div>
-					</div>
+
 
 				</div>
 
@@ -408,4 +428,12 @@
 	<!--Adds some open script icons from ionic -->
 	<script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
 	</body>
+
+	<script type="text/javascript" src="./library/gifffer-master/lib/gifffer.js"></script>
+
+<script>
+	window.onload = function() {
+		Gifffer();
+	}
+</script>
 </html>
