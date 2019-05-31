@@ -111,17 +111,26 @@ Inputs:
 
 }
 
+function getRandomAccess() {
+	let member_prob = .7;
+	let rnd = Math.random();
+	if (rnd<=member_prob){
+		return 2;
+	}else{
+		return getRandomInt(2); 
+	}
+}
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-
 clubList = []
 function initGroupCards(){
-	let club_handles = ["devClub_nu", "cookology_nu", "_64Squares_nu", "GLAC_nu", "AEPI_nu", "kelloggPhdSoccer_nu",
+	let club_handles = ["cs_Faculty_nu", "devClub_nu", "cookology_nu", "_64Squares_nu", "GLAC_nu", "AEPI_nu", "kelloggPhdSoccer_nu",
 					"freeDaBelly_nu", "asa_nu", "bBurlesque_nu", "cs343_studygrouuup9", "cheesClub_nu", "boogo_party"]
 
-	let club_descr = ["Northwestern's Software Development Club",
+	let club_descr = ["Faculty's of NU's Computer Science Dept","Northwestern's Software Development Club", 
 	                "A culinary arts student group",
 	                "A chess playing club at Northwestern", 
 	                "The Graduate Leadership & Advocacy Council",
@@ -134,7 +143,7 @@ function initGroupCards(){
 	                "Do you like cheese?",
 	                "Black out or get out party series by EPIC"]
 
-	let club_images = ["./images/devclub.png", "./images/cookology_nu.png", "./images/64Squares_nu.jpg", "./images/glac_nu.png",
+	let club_images = ["./images/css.jpg", "./images/devclub.png", "./images/cookology_nu.png", "./images/64Squares_nu.jpg", "./images/glac_nu.png",
 					"./images/aepi_nu.png", "./images/kelloggsoccer.jpeg", "./images/freefood.jpg", "./images/asa_nu.jpeg",
 					"./images/burlesque.jpg", "./images/study_group.jpg", "./images/coffee_guy.jpg", "./images/boog.jpg"]
 
@@ -142,15 +151,14 @@ function initGroupCards(){
 	let memberOptions = [member.ADMIN, member.OWNER, member.GENERAL];
 
 	//Randomly set permissions and favorites
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<club_handles.length; i++){
 		//Set up the group information
 		let group = new Group(club_handles[i], club_images[i]);
 		group.setLocation("IL","Evanston","USA");
 		group.setDescr(club_descr[i]);
 
 		//set up the rest of the info
-		let club = new ClubMember(memberOptions[getRandomInt(3)], group);
-
+		let club = new ClubMember(memberOptions[getRandomAccess()], group);
 		//append to vector. 
 		clubList.push(club);
 	}
@@ -265,7 +273,7 @@ function all_groups(){
 	let active = [];
 	let formatt = "";
 
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<clubList.length; i++){
 		active.push(clubList[i].group.handle);
 		formatt+=getFormat(clubList[i]);
 	}
@@ -285,7 +293,7 @@ function all_groups(){
 function owner_admin(){
 	let active = [];
 	let formatt = "";
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<clubList.length; i++){
 		memType = clubList[i].mem;
 		if (memType==member.ADMIN || memType==member.OWNER){
 			active.push(clubList[i].group.handle);
@@ -311,7 +319,7 @@ function owner_admin(){
 function favorites(){
 	let active = [];
 	let formatt = "";
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<clubList.length; i++){
 		memType = clubList[i].mem;
 		if (clubList[i].fav==1){
 			active.push(clubList[i].group.handle);
@@ -335,7 +343,7 @@ function favorites(){
 function following(){
 	let active = [];
 	let formatt = "";
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<clubList.length; i++){
 		memType = clubList[i].mem;
 		if (!(memType==member.ADMIN || memType==member.OWNER)){
 			active.push(clubList[i].group.handle);
@@ -385,7 +393,7 @@ function getGroups(gType){
 function default_groups(){
 	let active = [];
 	let formatt = "";	
-	for (let i = 0; i<12; i++){
+	for (let i = 0; i<clubList.length; i++){
 		memType = clubList[i].mem;
 		if (memType==member.ADMIN || memType==member.OWNER){
 			active.push(clubList[i].group.handle);

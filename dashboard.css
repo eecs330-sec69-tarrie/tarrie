@@ -259,15 +259,17 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 0;
+
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
-
+	border: .01em solid rgba(136,136,136,0.75);
 }
 
 .contacts{
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
+
     border-radius: .8em;
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
 	border: .01em solid rgba(136,136,136,0.75);
@@ -277,8 +279,10 @@ body {
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
+
 	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
+	border: .01em solid rgba(136,136,136,0.75);
 
 }
 
@@ -454,7 +458,6 @@ body {
 	padding-top: .1em;
 	text-align: center; 
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 'light';
 	letter-spacing: 0.05em;
 	padding-bottom: 0; 
 	margin-bottom: .25em;
@@ -500,7 +503,6 @@ body {
 }
 
 
-
 .group-event-searchbar ion-icon{
   	vertical-align: middle;
   	padding: 0;
@@ -526,14 +528,17 @@ body {
 .event-stripe{
 	display:inline-block;
 	margin:0px;
-	padding-bottom: 9em;
+	padding:0;
+
 }
 
 
 .event-calender{
 	display:inline-block;
-	margin:0;
+	margin-top: -10em;
 	padding:0;
+	margin-bottom: -4em;
+
 }
 .event-calender ion-icon{
 	width: 1em;
@@ -541,8 +546,6 @@ body {
 	vertical-align: middle;
 	font-size: 2em;
 	cursor: pointer;
-	margin: 0;
-	padding: 0;
 	color: #1e824c;
   }
 
@@ -551,6 +554,8 @@ body {
 	font-size: .75em;
 	cursor: pointer;
 	letter-spacing: 0.05em;
+	margin: 0;
+	padding: 0;
 }
 
 /*
@@ -662,11 +667,22 @@ body {
 
 */
 
+/* Display this when there are no cards*/
+.no-cards{
+	height: 100%;
+	width: 100%;
+	padding-top: 14vw;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	color:rgba(47,79,79,0.50);
+}
+
 /*Settings for scrolling box*/
 .content {
   display: inline-flex;
   flex-direction: column;
   overflow: scroll;
+
 } 
 
 .block{
@@ -702,6 +718,7 @@ body {
 	padding-right: 1vw;
 	padding-top: 1em;
 	margin-left:.3vw;
+
 }
 
 
@@ -719,6 +736,11 @@ body {
 .group-card:hover {
 	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
 }
+
+.group-card:focus {
+	box-shadow: .1em .3em .5em .1em rgba(0,0,0,0.2);
+}
+
 
 .group-header{
 	padding-top: 0.1em;
@@ -773,7 +795,9 @@ body {
 	font-size: 1em; 
 }
 
-/*Events */
+
+
+/**********Events **************/
 .event-card-holder {
 	/*display: inline-flex;*/
 	height:35vw;
@@ -788,27 +812,54 @@ body {
 	margin-left:.3vw;
 }
 
+
+.event-details{
+	height: 40%;
+	padding: 0;
+	margin:0;
+}
+
+
 .event-card {
 	width: 99%;
 	border: .05em solid rgba(136,136,136,0.50);
 	border-radius: .5em;
 	margin-bottom: 1em;
-	background-image: url("./images/cream_dust.png");*/
+	//background-image: url("./images/cream_dust.png");*/
 	background-repeat: repeat-x repeat-y;
 	box-shadow: 0 .1em .1em 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
 	height: 17vw;
+	background-color: rgba(0,0,0,0.05);
+	margin:0;
+	padding: 0;
 }	
 
-.event-border {
-	width:10%;
+
+.vl{
+	border-right:solid .2vw;
+
+}
+.event-month-day {
+	width:20%;
 	float:left;
 	color: #1e824c;
 	background-color: #FFF;
 	height: 100%;
 	text-align: center;
-	font-family: Montserrat;
+	border-right:solid .2vw;
 
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 'semi-bold';
+}
+
+.event-txt-details{
+	width:75%;
+	height: 100%;
+	font-family: Montserrat;
+	padding: 0;
+	margin:0;
 }
 
 .img-container {
@@ -817,9 +868,9 @@ body {
 
 .event-image {
 	/*width: 40%;*/
-	width:90%;
+	width:100%;
 	float:left;
-	height:70%;
+	height:60%;
 	margin-top:auto;
 	margin-bottom: auto;
 	vertical-align: middle;
@@ -829,26 +880,47 @@ body {
 	display: block;
 	float: left;
 	width:90%;
-	color: black;
+	color: black;\
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 'semi-bold';
 	/*text-align: center;*/
 }
 
 .event-info {
+	margin-top: .5vw;
 	display:block;
 	float:left;
 	width:90%;
  	color: black;
+ 	font-size: 1vw;
+	color:rgba(47,79,79,0.50);
+	font-size: 1.1vw;
  	/*text-align: center;*/
 
 }
 
+.mo-day{
+	margin-top: .5em;
+	line-height: 1.5em;
+	letter-spacing: 0.05em;
+}
+.event-date{
+	font-size: 1vw;
+	color:#990000;
+
+}
 .event-grouplocation {
 	display: block;
 	float: left;
 	color:black;
 	width:90%;
+	font-size: 1.1vw;
+	color:rgba(47,79,79,0.50);
+
 	/*text-align: center;*/
 }
+/***********************/
 
 
 .manager{
@@ -943,3 +1015,7 @@ body {
 	margin-top:1em;
 	padding: 0;	
 }
+
+
+
+
