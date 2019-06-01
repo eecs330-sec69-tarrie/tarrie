@@ -19,7 +19,12 @@
       gifs = []
 
     images = d.querySelectorAll('[data-gifffer]')
-    for (; i < images.length; ++i) process(images[i], gifs, options)
+    for (; i < images.length; ++i) {
+      console.log(images[i])
+      console.log(gifs)
+      console.log(options)
+      process(images[i], gifs, options)
+    }
     // returns each gif container to be usable programmatically
     return gifs
   }
@@ -39,32 +44,7 @@
     var con = d.createElement('BUTTON')
     var cls = el.getAttribute('class')
     var id = el.getAttribute('id')
-    var playButtonStyles =
-      opts && opts.playButtonStyles
-        ? parseStyles(opts.playButtonStyles)
-        : [
-            'width:' + playSize + 'px',
-            'height:' + playSize + 'px',
-            'border-radius:' + playSize / 2 + 'px',
-            'background:rgba(0, 0, 0, 0.3)',
-            'position:absolute',
-            'top:50%',
-            'left:50%',
-            'margin:-' + playSize / 2 + 'px'
-          ].join(';')
-    var playButtonIconStyles =
-      opts && opts.playButtonIconStyles
-        ? parseStyles(opts.playButtonIconStyles)
-        : [
-            'width: 0',
-            'height: 0',
-            'border-top: 14px solid transparent',
-            'border-bottom: 14px solid transparent',
-            'border-left: 14px solid rgba(0, 0, 0, 0.5)',
-            'position: absolute',
-            'left: 26px',
-            'top: 16px'
-          ].join(';')
+
 
     cls ? con.setAttribute('class', el.getAttribute('class')) : null
     id ? con.setAttribute('id', el.getAttribute('id')) : null
@@ -74,14 +54,7 @@
     )
     con.setAttribute('aria-hidden', 'true')
 
-    // creating play button
-    var play = d.createElement('DIV')
-    play.setAttribute('class', 'gifffer-play-button')
-    play.setAttribute('style', playButtonStyles)
 
-    var trngl = d.createElement('DIV')
-    trngl.setAttribute('style', playButtonIconStyles)
-    play.appendChild(trngl)
 
     // create alt text if available
     if (altText) {
@@ -95,10 +68,9 @@
     }
 
     // dom placement
-    con.appendChild(play)
     el.parentNode.replaceChild(con, el)
     altText ? con.parentNode.insertBefore(alt, con.nextSibling) : null
-    return { c: con, p: play }
+    return { c: con }
   }
 
   function calculatePercentageDim(el, w, h, wOrig, hOrig) {
@@ -125,10 +97,9 @@
       c,
       w,
       h,
+      playing =false,
       duration,
-      play,
       gif,
-      playing = false,
       cc,
       isC,
       durationTimeout,
@@ -157,14 +128,32 @@
       // creating the container
       if (!cc) cc = createContainer(w, h, el, altText, options)
       con = cc.c
-      play = cc.p
+      //play = cc.p
       dims = calculatePercentageDim(con, w, h, el.width, el.height)
 
-      // add the container to the gif arraylist
+      //listening for image hover or touch
       gifs.push(con)
+      con.addEventListener('mouseout', function(){
+        playing = false
+        //con.appendChild(play)
+        con.removeChild(gif)
+        con.appendChild(c)
+        gif = null
+      })
 
-      // listening for image click
-      con.addEventListener('click', function() {
+      con.addEventListener('touchstart', function(){
+        playing = false
+        //con.appendChild(play)
+        con.removeChild(gif)
+        con.appendChild(c)
+        gif = null
+      })
+
+
+
+
+      // listening for image hover or touch
+      con.addEventListener('touchend', function() {
         clearTimeout(durationTimeout)
         if (!playing) {
           playing = true
@@ -174,25 +163,44 @@
           setTimeout(function() {
             gif.src = url
           }, 0)
-          con.removeChild(play)
+          //con.removeChild(play)
           con.removeChild(c)
           con.appendChild(gif)
           if (parseInt(duration) > 0) {
             durationTimeout = setTimeout(function() {
               playing = false
-              con.appendChild(play)
+              //con.appendChild(play)
               con.removeChild(gif)
               con.appendChild(c)
               gif = null
             }, duration)
           }
-        } else {
-          playing = false
-          con.appendChild(play)
-          con.removeChild(gif)
-          con.appendChild(c)
-          gif = null
-        }
+        } 
+      })
+
+      con.addEventListener('mouseover', function() {
+        clearTimeout(durationTimeout)
+        if (!playing) {
+          playing = true
+          gif = document.createElement('IMG')
+          gif.setAttribute('style', 'width:100%;height:100%;')
+          gif.setAttribute('data-uri', Math.floor(Math.random() * 100000) + 1)
+          setTimeout(function() {
+            gif.src = url
+          }, 0)
+          //con.removeChild(play)
+          con.removeChild(c)
+          con.appendChild(gif)
+          if (parseInt(duration) > 0) {
+            durationTimeout = setTimeout(function() {
+              playing = false
+              //con.appendChild(play)
+              con.removeChild(gif)
+              con.appendChild(c)
+              gif = null
+            }, duration)
+          }
+        } 
       })
 
       // canvas
