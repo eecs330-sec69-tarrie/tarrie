@@ -2,7 +2,7 @@ body {
 	/*background-image: url("images/iphoneOL.jpg");*/
 	font-family: Palatino, sans-serif;
 	font-size:1.5vw;
-	background-image: url("./images/cream_dust.png");
+	background-image: url("./images/redox_01.png");
 	background-repeat: repeat-x repeat-y;
 
 }
@@ -12,9 +12,17 @@ body {
 	height: 100%;
 	width: 100%;
 	margin: 0 auto;
-	background-image: url("./images/cream_dust.png");
+	background-image: url("./images/redox_01.png");
 	background-repeat: repeat-x repeat-y;
 	
+}
+.footer{
+	width: 100%; 
+	height: 1%;
+	background-image: url("./images/redox_01.png");
+	background-repeat: repeat-x repeat-y;	
+	margin-top:1em;
+	padding: 0;	
 }
 
 /******************* top line of the page (logo + options) ************/
@@ -56,7 +64,7 @@ body {
 	height: 90%;
 	margin-top:-1em;
 	
-	background-image: url("./images/cream_dust.png");
+	background-image: url("./images/redox_01.png");
 	background-repeat: repeat-x repeat-y;
 	
 }
@@ -1007,14 +1015,7 @@ body {
 /************************************************************/
 
 
-.footer{
-	width: 100%; 
-	height: 1%;
-	background-image: url("./images/cream_dust.png");
-	background-repeat: repeat-x repeat-y;
-	margin-top:1em;
-	padding: 0;	
-}
+
 
 
 
