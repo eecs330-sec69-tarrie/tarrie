@@ -19,7 +19,12 @@
       gifs = []
 
     images = d.querySelectorAll('[data-gifffer]')
-    for (; i < images.length; ++i) process(images[i], gifs, options)
+    for (; i < images.length; ++i) {
+      //console.log(images[i])
+      //console.log(gifs)
+      //console.log(options)
+      process(images[i], gifs, options)
+    }
     // returns each gif container to be usable programmatically
     return gifs
   }
@@ -39,31 +44,32 @@
     var con = d.createElement('BUTTON')
     var cls = el.getAttribute('class')
     var id = el.getAttribute('id')
-    var playButtonStyles =
+   var playButtonStyles =
       opts && opts.playButtonStyles
         ? parseStyles(opts.playButtonStyles)
         : [
-            'width:' + playSize + 'px',
-            'height:' + playSize + 'px',
-            'border-radius:' + playSize / 2 + 'px',
+            'width:' + 6.5 + '%',
+            'height:' + 10 + '%',
+            'border-radius:' + .1 + 'em',
             'background:rgba(0, 0, 0, 0.3)',
             'position:absolute',
-            'top:50%',
-            'left:50%',
-            'margin:-' + playSize / 2 + 'px'
+            'top:93%',
+            'left:95%',
+            'margin:-' + 1+ 'em'
           ].join(';')
+
     var playButtonIconStyles =
       opts && opts.playButtonIconStyles
         ? parseStyles(opts.playButtonIconStyles)
         : [
             'width: 0',
             'height: 0',
-            'border-top: 14px solid transparent',
-            'border-bottom: 14px solid transparent',
-            'border-left: 14px solid rgba(0, 0, 0, 0.5)',
             'position: absolute',
-            'left: 26px',
-            'top: 16px'
+            'color: white',
+            'left: .22vw',
+            'top: .2vw', 
+            'font-size: .9vw',
+            'z-axis: -5'
           ].join(';')
 
     cls ? con.setAttribute('class', el.getAttribute('class')) : null
@@ -79,9 +85,13 @@
     play.setAttribute('class', 'gifffer-play-button')
     play.setAttribute('style', playButtonStyles)
 
-    var trngl = d.createElement('DIV')
-    trngl.setAttribute('style', playButtonIconStyles)
-    play.appendChild(trngl)
+
+    //console.log(playButtonIconStyles)
+    var gifIndicator = d.createElement('DIV')
+    gifIndicator.textContent = "GIF";
+    gifIndicator.setAttribute('style', playButtonIconStyles)
+    play.appendChild(gifIndicator)
+
 
     // create alt text if available
     if (altText) {
@@ -98,7 +108,7 @@
     con.appendChild(play)
     el.parentNode.replaceChild(con, el)
     altText ? con.parentNode.insertBefore(alt, con.nextSibling) : null
-    return { c: con, p: play }
+    return { c: con }
   }
 
   function calculatePercentageDim(el, w, h, wOrig, hOrig) {
@@ -125,10 +135,9 @@
       c,
       w,
       h,
+      playing =false,
       duration,
-      play,
       gif,
-      playing = false,
       cc,
       isC,
       durationTimeout,
@@ -139,6 +148,7 @@
     w = el.getAttribute('data-gifffer-width')
     h = el.getAttribute('data-gifffer-height')
     duration = el.getAttribute('data-gifffer-duration')
+    //console.log(parseInt(duration))
     altText = el.getAttribute('data-gifffer-alt')
     el.style.display = 'block'
 
@@ -157,14 +167,31 @@
       // creating the container
       if (!cc) cc = createContainer(w, h, el, altText, options)
       con = cc.c
-      play = cc.p
+      //play = cc.p
       dims = calculatePercentageDim(con, w, h, el.width, el.height)
 
-      // add the container to the gif arraylist
+      //listening for image hover or touch
       gifs.push(con)
+      //console.log(con)
 
-      // listening for image click
-      con.addEventListener('click', function() {
+      //console.log(c)
+
+      var stopPlay = function(){ playing = false;
+                                //con.appendChild(play)
+                                con.removeChild(gif);
+                                con.appendChild(c);
+                                //console.log(c)
+                                gif = null;};
+
+
+      con.addEventListener('mouseout', function(){stopPlay();});
+      con.addEventListener('touchend', function(){stopPlay();});
+
+
+
+
+      // listening for image hover or touch
+      con.addEventListener('touchstart', function() {
         clearTimeout(durationTimeout)
         if (!playing) {
           playing = true
@@ -174,25 +201,36 @@
           setTimeout(function() {
             gif.src = url
           }, 0)
-          con.removeChild(play)
+          //con.removeChild(play)
+          con.appendChild(gif)
+            con.removeChild(c)
+
+          if (parseInt(duration) > 0) {
+            //console.log('here')
+            durationTimeout = setTimeout(stopPlay, parseInt(duration)); 
+          }
+        }else{
+
+        } 
+      })
+
+      con.addEventListener('mouseover', function() {
+        clearTimeout(durationTimeout)
+        if (!playing) {
+          playing = true
+          gif = document.createElement('IMG')
+          gif.setAttribute('style', 'width:100%;height:100%;')
+          gif.setAttribute('data-uri', Math.floor(Math.random() * 100000) + 1)
+          setTimeout(function() {
+            gif.src = url
+          }, 0)
+          //con.removeChild(play)
           con.removeChild(c)
           con.appendChild(gif)
           if (parseInt(duration) > 0) {
-            durationTimeout = setTimeout(function() {
-              playing = false
-              con.appendChild(play)
-              con.removeChild(gif)
-              con.appendChild(c)
-              gif = null
-            }, duration)
+            durationTimeout = setTimeout(stopPlay, parseInt(duration)); 
           }
-        } else {
-          playing = false
-          con.appendChild(play)
-          con.removeChild(gif)
-          con.appendChild(c)
-          gif = null
-        }
+        } 
       })
 
       // canvas
@@ -213,6 +251,9 @@
 
       c.style.width = '100%'
       c.style.height = '100%'
+      c.style.borderRadius='.5em .5em 0 0'
+
+
 
       if (w.toString().indexOf('%') > 0 && h.toString().indexOf('%') > 0) {
         con.style.width = w

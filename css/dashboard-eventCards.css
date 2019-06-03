@@ -1,0 +1,35 @@
+
+
+
+.gif-img {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+.event-image {
+	/*width: 40%;*/
+	width:50vw;
+	height:50vw;
+	margin-top:auto;
+	margin-bottom: 60px;
+	margin-left:100px;
+	margin-top:200px;
+	border: 0.05vw solid rgba(136,136,136,0.50);
+	display: inline-block;
+
+}
+
+.gif-indicator {
+  text-align: center;
+  border-radius: 1vw;
+  background-color: white;
+  width: 9%;
+  height: 5%;
+  font-family: Montserrat; 
+  font-weight: "light";
+  font-size: .8em;
+  margin-top: -3.5vw;
+  margin-left: .5vw;
+  border:.09em solid rgba(0,0,0,1);
+}
