@@ -395,11 +395,13 @@ function FormatEventCard(id, mem_Type, club_name, club_handle, club_img, loc,tim
 		<div class="event-details" style="display: inline-block;">
 			<div class="event-txt-details" style="float:left;clear:left;">
 				<h4 class="event-title">${event_name}</h4><br/>
+				<div class="space"></div>
 				<p class="event-date" >${datetime}</p>
 				<section class="event-loc" >
 					<p class="event-loc-title" style="margin:0;padding:0;">
 						${location_name}
 					<p/>
+
 					<p class="event-loc-addr"  style="margin:0;padding:0;">
 						${location}
 					</p>
