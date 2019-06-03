@@ -459,8 +459,19 @@ function getFormatEventCard(club, rsvp=false, saved = false){
 
 	/* Gets properly formatted eventDate*/
 	getDate=function(time){
+		let datasound; 
+		if (time.day == 1){
+			datasound = "st";
+		}else if (time.day ==2){
+			datasound = "nd";
+		}else if (time.day ==3){
+			datasound = "rd";
+		}else{
+			datasound = "th";
+		}
+
 		let eventDate=''; 
-		eventDate += time.dayOfWeek+"., "+time.month+" "+time.day+"th from "
+		eventDate += time.dayOfWeek+"., "+time.month+" "+time.day+datasound+" from "
 		if (time.endTime ==''){
 			eventDate +=time.startTime; 
 		}else{
