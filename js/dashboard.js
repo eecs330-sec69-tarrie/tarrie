@@ -21,7 +21,7 @@ function group_event_button_up(group_event){
 function click_down(id, reverse=false){
 	if (reverse==true) {
 		var cal = document.getElementById(id);
-		cal.style.color = "#1e824c";
+		cal.style.color = "rgba(0, 100, 0,1)";
 		return;
 	}
 	var cal = document.getElementById(id);
@@ -36,7 +36,7 @@ function click_up(id, reverse=false){
 		return;
 	}
 	var cal = document.getElementById(id);
-	cal.style.color = "#1e824c";
+	cal.style.color = "rgba(0, 100, 0,1)";
 
 }
 
@@ -873,7 +873,7 @@ function setCategory(cat){
 
 	if (curr_group !=null){
 		curr_group.style["border-bottom"]= "2px solid"; 
-		curr_group.style["border-bottom-color"]= "#1e824c"; 
+		curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)"; 
 
 
 		is_favoritesOn = (cat == "favorites"); /*case in which we are in the favorite group*/
@@ -898,12 +898,12 @@ function initCategories(){
 	//set init category for groups to owner+admin
 	var curr_group = document.getElementById("owner_admin");
 	curr_group.style["border-bottom"]= "2px solid"; 
-	curr_group.style["border-bottom-color"]= "#1e824c"; 
+	curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)"; 
 	curr_group_category = "owner_admin"; 
 	//set init category for events to hosting
 	var curr_group = document.getElementById("hosting");
 	curr_group.style["border-bottom"]= "2px solid"; 
-	curr_group.style["border-bottom-color"]= "#1e824c";  
+	curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)";  
 	curr_event_category = "hosting"; 
 }
 
