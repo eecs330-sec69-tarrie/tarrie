@@ -446,7 +446,7 @@ group-card*/
 	padding-left: 2vw;
 	padding-right: 2vw;
 	margin-top: 0;
-	height:55vw;
+	height:90vh;
 	margin-bottom: 0;
 
 	/*Flex container parameters-- so the box grows down w/ children*/
@@ -470,7 +470,7 @@ group-card*/
 	margin-top: 0;
 	padding-top: 0; 
 	width: 39vw;
-	height:55vw;
+	height:90vh;
 
 
 	/*height: 8%;*/
@@ -758,7 +758,7 @@ group-card*/
 
 .group-card-holder{
 	/*display: inline-flex;*/
-	height:35vw;
+	height:65%;
 	flex-direction: column;
     display: flex;
 	border: .05em solid rgba(136,136,136,0.50);
@@ -876,7 +876,7 @@ group-card*/
 
 .event-card-holder {
 	/*display: inline-flex;*/
-	height:35vw;
+	height:65%;
 	flex-direction: column;
     display: flex;
 	border: .05em solid rgba(136,136,136,0.50);
