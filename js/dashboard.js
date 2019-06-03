@@ -21,7 +21,7 @@ function group_event_button_up(group_event){
 function click_down(id, reverse=false){
 	if (reverse==true) {
 		var cal = document.getElementById(id);
-		cal.style.color = "#1e824c";
+		cal.style.color = "rgba(0, 100, 0,1)";
 		return;
 	}
 	var cal = document.getElementById(id);
@@ -36,7 +36,7 @@ function click_up(id, reverse=false){
 		return;
 	}
 	var cal = document.getElementById(id);
-	cal.style.color = "#1e824c";
+	cal.style.color = "rgba(0, 100, 0,1)";
 
 }
 
@@ -394,12 +394,14 @@ function FormatEventCard(id, mem_Type, club_name, club_handle, club_img, loc,tim
 		<!-- Event details such as time, date, people going --> 
 		<div class="event-details" style="display: inline-block;">
 			<div class="event-txt-details" style="float:left;clear:left;">
-				<h4 class="event-title" style="margin:0;padding:0;">${event_name}</h4><br/>
+				<h4 class="event-title">${event_name}</h4><br/>
+				<div class="space"></div>
 				<p class="event-date" >${datetime}</p>
 				<section class="event-loc" >
 					<p class="event-loc-title" style="margin:0;padding:0;">
 						${location_name}
 					<p/>
+
 					<p class="event-loc-addr"  style="margin:0;padding:0;">
 						${location}
 					</p>
@@ -459,8 +461,19 @@ function getFormatEventCard(club, rsvp=false, saved = false){
 
 	/* Gets properly formatted eventDate*/
 	getDate=function(time){
+		let datasound; 
+		if (time.day == 1){
+			datasound = "st";
+		}else if (time.day ==2){
+			datasound = "nd";
+		}else if (time.day ==3){
+			datasound = "rd";
+		}else{
+			datasound = "th";
+		}
+
 		let eventDate=''; 
-		eventDate += time.dayOfWeek+"., "+time.month+" "+time.day+"th from "
+		eventDate += time.dayOfWeek+"., "+time.month+" "+time.day+datasound+" from "
 		if (time.endTime ==''){
 			eventDate +=time.startTime; 
 		}else{
@@ -873,7 +886,7 @@ function setCategory(cat){
 
 	if (curr_group !=null){
 		curr_group.style["border-bottom"]= "2px solid"; 
-		curr_group.style["border-bottom-color"]= "#1e824c"; 
+		curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)"; 
 
 
 		is_favoritesOn = (cat == "favorites"); /*case in which we are in the favorite group*/
@@ -898,12 +911,12 @@ function initCategories(){
 	//set init category for groups to owner+admin
 	var curr_group = document.getElementById("owner_admin");
 	curr_group.style["border-bottom"]= "2px solid"; 
-	curr_group.style["border-bottom-color"]= "#1e824c"; 
+	curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)"; 
 	curr_group_category = "owner_admin"; 
 	//set init category for events to hosting
 	var curr_group = document.getElementById("hosting");
 	curr_group.style["border-bottom"]= "2px solid"; 
-	curr_group.style["border-bottom-color"]= "#1e824c";  
+	curr_group.style["border-bottom-color"]= "rgba(0, 100, 0,1)";  
 	curr_event_category = "hosting"; 
 }
 
