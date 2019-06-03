@@ -1002,12 +1002,12 @@ group-card*/
 }
 
 .vertical-line{
-	height: 90%; 
+	height: 94%; 
 	width:.3%;
 	background-color:rgba(47,79,79,0.50);
 	float:left;
 	margin-top: .5vw;
-	margin-top:-6.5vw;
+	margin-top:-6.8vw;
 }
 
 
@@ -1170,6 +1170,9 @@ group-card*/
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.1vw;
 	/*text-align: center;*/
+	margin-top:.3vw;
+	margin-bottom:0;
+	padding:0;
 }
 
 
