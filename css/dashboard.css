@@ -925,7 +925,7 @@ group-card*/
 	margin:0;
 	margin-left: .5vw;
 	margin-top:.5vw;
-	border-top: solid .08vw rgba(47,79,79,0.50);
+	border-top: solid .08em rgba(47,79,79,0.50);
 }
 
 
@@ -1001,7 +1001,7 @@ group-card*/
 
 .vertical-line{
 	height: 94%; 
-	width:.3%;
+	width:.09em;
 	background-color:rgba(47,79,79,0.50);
 	float:left;
 	margin-top: .5vw;
