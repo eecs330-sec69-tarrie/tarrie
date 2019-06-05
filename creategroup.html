@@ -1,0 +1,126 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/creategroup.css"/>
+		<script src="creategroup.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:extra-light,light&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:light, semi-bold,bold,regular+italic|Montserrat:light,thin,regular,semi-bold,bold&display=swap" rel="stylesheet">
+		<script src="./js/creategroup.js"></script>
+	</head>
+	<body>
+		<div class="head-top"> 
+			<a href="dashboard.html" style="text-decoration:none;">
+				<div class="name" style="color:#1e824c">
+					<b>Tarri&#x0113;</b>
+				</div>
+			</a>
+		</div>
+		<!--<div class="header">
+			
+		</div>-->
+		<div id="side-panel2">
+			<p style="font-size: 30px;margin-left:10%;margin-right:10%;margin-top:12%;color:white;">
+				Create a group for all your event needs
+			</p>
+			<br>
+			<p style="font-size: 15px;color:white;margin-left:10%;margin-right:9%;line-height:1.5;">
+				Create, share, and manage events, follow groups and have followers, receive alerts, and keep members connected.<br>
+
+			</p>
+			<br>
+			<br>
+			<p style="font-size: 17px;color:white;margin-left:10%;margin-right:9%;line-height:1.5;">
+				Become and owner and have administrative privileges. Manage events and people, including followers. 
+				<!--Steps:<br>
+				1. Name it!<br>
+				2. Add a cool photo!<br>
+				3. Add contacts<br>
+				4. Include a brief description<br>-->
+
+			</p>
+			<br>
+			<br>
+			<div style="height:400px%;width:100%;background-color:white;">
+				<img src="./images/speech.png" style="height:300px;width:100%;">
+			</div>
+			<br>
+			<span style="color:white;font-size:20px;float:right;margin-right:5%;cursor:pointer;" onclick="slide2()">Got it!</span>
+		</div>
+		<div class="flex-container">
+			<div id="side-panel">
+				<h1>My Contacts</h1>
+				<div class="search-container" style="width:100%">
+					<form>
+						<input type="text" id="myinput" onkeyup="filter()" placeholder="Search and click contact to add" name="search" autocomplete="off">
+						<!--<input type="submit" value="ADD" class="submit-btn">-->
+						<!--<span id="button" class="submit-btn" style="color:#1e824c;border:1px solid black;" onclick="slide()"><b>ADD</b></span>-->
+						<span id="button" class="submit-btn" style="color:#1e824c;border:1px solid black;" onclick="slide()"><b>DONE</b></span>
+						<br>
+						<ul id="myUL">
+  							<li><a id="1" onclick="changetext(1)"><img src="./images/profile.png" style="height:20px; width:20px;">  Adele Aaron</a></li>
+ 							<li><a id="2" onclick="changetext(2)"><img src="./images/profile.png" style="height:20px; width:20px;">  Agnes Arvin</a></li>
+
+ 							<li><a id="3" onclick="changetext(3)"><img src="./images/profile.png" style="height:20px; width:20px;">  Billy Burgess</a></li>
+  							<li><a id="4" onclick="changetext(4)"><img src="./images/profile.png" style="height:20px; width:20px;">  Bob Arvind</a></li>
+
+  							<li><a id="5" onclick="changetext(5)"><img src="./images/profile.png" style="height:20px; width:20px;">  Calvin Candy</a></li>
+							<li><a id="6" onclick="changetext(6)"><img src="./images/profile.png" style="height:20px; width:20px;">  Christina Cameron</a></li>
+							<li><a id="7" onclick="changetext(7)"><img src="./images/profile.png" style="height:20px; width:20px;">  Cindy Capote</a></li>
+
+							<li><a id="8" onclick="changetext(8)"><img src="./images/profile.png" style="height:20px; width:20px;">  Daniel Dubose</a></li>
+							<li><a id="9" onclick="changetext(9)"><img src="./images/profile.png" style="height:20px; width:20px;">  Danielle Duvalin</a></li>
+							<li><a id="10" onclick="changetext(10)"><img src="./images/profile.png" style="height:20px; width:20px;">  David Lemur</a></li>
+
+							<li><a id="11" onclick="changetext(11)"><img src="./images/profile.png" style="height:20px; width:20px;">  Evan Le</a></li>
+							<li><a id="12" onclick="changetext(12)"><img src="./images/profile.png" style="height:20px; width:20px;">  Eve Egan</a></li>
+
+							<li><a id="13" onclick="changetext(13)"><img src="./images/profile.png" style="height:20px; width:20px;">  Fabian Fiora</a></li>
+							<li><a id="14" onclick="changetext(14)"><img src="./images/profile.png" style="height:20px; width:20px;">  Felicia Fern</a></li>
+						</ul>
+					</form>
+				</div>
+			</div>
+  			<div class="content-container">
+    			<div class="form-container">
+      				<form name="myForm" action="dashboard.html" onsubmit="return validateForm()" method="post">
+        				<h1>
+          					Create a New Group
+        				</h1>
+        				<br>
+        				<br>
+        				<span class="subtitle"><b>GROUP NAME:</b></span>
+        				<br>
+        				<input type="text" name="username" value="" placeholder="Group Name" autocomplete="off" required>
+        				<br>
+        				<span class="subtitle"><b>GROUP COVER PHOTO:</b></span>
+        				<br>
+        				<input type="file" name="file" id="file" class="files"/>
+        				<label for="file">Choose a file</label>
+        				<br>
+        				<br>
+        				<!--<span class="subtitle">Privacy</span>
+        				<br>
+        				<input type="radio" class="privacy" name="privacy" value="private"> <b>Private</b> Content is for members only<br>
+        				<input type="radio"  class="privacy" name="privacy" value="public"> Public<br>
+        				<input type="radio" class="privacy" name="privacy" value="shared"> Shared<br>
+        				<br>-->
+        				<span class="subtitle"><b>ADD CONTACTS:</b></span>
+        				<br>
+        				<input  id="add" class="contacts" type="text" name="contacts" value="" placeholder="Add By Email" autocomplete="off">
+        				<br>
+        				<span id="button" style="text-decoration:none;font-size:10px;" onclick="slide()"><b>Search By Name</b></span>
+        				<br>
+        				<br>
+        				<span class="subtitle"><b>ABOUT THE GROUP:</b></span>
+        				<br>
+        				<input type="text" name="about" value="" placeholder="Add Description Here!" autocomplete="off" required>
+        				<br>
+        				<br>
+        				<input type="submit" value="CREATE" class="submit-btn">
+      				</form>
+    			</div>
+  			</div>
+		</div>
+	</body>
+</html>
