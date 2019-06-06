@@ -292,15 +292,19 @@ group-card*/
 }
 
 
+.mail:hover, .contacts:hover, .alerrts:hover{
+	text-shadow: .03em .03em  rgba(136,136,136,0.75); 
+	color:rgba(0,0,0,1);
+
+}
 
 .mail{
 	width: 25%;
 	height: 100%;
 	margin-left: 0;
-
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
+	padding:0;
     border-radius: .8em;
-	border: .01em solid rgba(136,136,136,0.75);
+	border: .1em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
 	color:rgba(0,0,0,.7);;
@@ -309,11 +313,6 @@ group-card*/
 
 
 
-.mail:hover, .contacts:hover, .alerrts:hover{
-	text-shadow: .03em .03em  rgba(136,136,136,0.75); 
-	color:rgba(0,0,0,1);
-
-}
 
 .contacts{
 	width: 25%;
@@ -321,8 +320,7 @@ group-card*/
 	margin-left: 9.9%;
 
     border-radius: .8em;
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
-	border: .01em solid rgba(136,136,136,0.75);
+	border: .1em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
 	color:rgba(0,0,0,.7);
@@ -334,9 +332,8 @@ group-card*/
 	height: 100%;
 	margin-left: 9.9%;
 
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
-	border: .01em solid rgba(136,136,136,0.75);
+	border: .1em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
 	color:rgba(0,0,0,.7);
@@ -344,9 +341,7 @@ group-card*/
 
 }
 
-.horiz-button-icon-body{
-    border-radius: .8em 0em 0em .8em;
-}
+
 
 
 .mail ion-icon{
@@ -378,6 +373,8 @@ group-card*/
 	text-align: center;
 	padding-bottom:2em;
 	padding-top: .8em;
+	padding-left: 0;
+	margin-left: 0;
 
 }
 
@@ -416,14 +413,16 @@ group-card*/
 
 }
 
-
+.horiz-button-icon-body{
+   border-radius: .68em 0 0 .68em;
+}
 
 .mail .horiz-button-icon-body{
 	height:100%;
 	width: 45%;
 	background-color:rgba(131,52,113,.95);
-
 	text-align: center;
+	margin-left: -.01em;
 }
 .contacts .horiz-button-icon-body{
 	height:100%;
