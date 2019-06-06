@@ -37,20 +37,21 @@ array[12] = "fabianfiora2020@u.northwestern.edu";
 array[13] = "feliciafern2019@u.northwestern.edu";
 
       function slide() {
-        if(document.getElementById("side-panel").style.width=='35%') 
+        if(document.getElementById("side-panel").style.width=='33.3vw') 
         {
-          document.getElementById("side-panel").style.width='0%';
-          document.getElementById("side-panel").style.height='0%';
+          document.getElementById("side-panel").style.width='0vw';
+          document.getElementById("side-panel").style.height='0vw';
         }
         else 
         {
-          document.getElementById("side-panel").style.width='35%';
-          document.getElementById("side-panel").style.height='72%';
+          document.getElementById("side-panel").style.width='33.3vw';
+          document.getElementById("side-panel").style.height='50vw';
         }
       }
 
       function slide2() {
         document.getElementById("side-panel2").style.width='0%';
+        document.getElementById("form-container").style.opacity="1.0";
         /*document.getElementById("side-panel2").style.height='0%';*/
         /*if(document.getElementById("side-panel2").style.width=='33.3%') 
         {
@@ -107,4 +108,5 @@ array[13] = "feliciafern2019@u.northwestern.edu";
           return false;
         }
       }
+
 
