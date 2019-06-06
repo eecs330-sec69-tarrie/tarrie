@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<title>Tarri&#x0113; | Create Group</title>
 		<link rel="stylesheet" type="text/css" href="./css/creategroup.css"/>
 		<script src="./js/creategroup.js"></script>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,10 +21,10 @@
 			
 		</div>-->
 		<div id="side-panel2">
-			<p style="font-size: 30px;margin-left:10%;margin-right:10%;margin-top:12%;color:white;">
+			<p style="font-size: 30px;margin-left:10%;margin-right:10%;margin-top:8%;color:white;">
 				Create a group for all your event needs
 			</p>
-			<br>
+			
 			<p style="font-size: 15px;color:white;margin-left:10%;margin-right:9%;line-height:1.5;">
 				Create, share, and manage events, follow groups and have followers, receive alerts, and keep members connected.<br>
 
@@ -31,7 +32,7 @@
 			<br>
 			<br>
 			<p style="font-size: 17px;color:white;margin-left:10%;margin-right:9%;line-height:1.5;">
-				Become and owner and have administrative privileges. Manage events and people, including followers. 
+				Become an owner and have administrative privileges. Manage events and people, including followers. 
 				<!--Steps:<br>
 				1. Name it!<br>
 				2. Add a cool photo!<br>
@@ -52,10 +53,13 @@
 				<h1>My Contacts</h1>
 				<div class="search-container" style="width:100%">
 					<form>
-						<input type="text" id="myinput" onkeyup="filter()" placeholder="Search and click contact to add" name="search" autocomplete="off">
+						<div class="search-bar">
+							<i class="material-icons">search</i>
+							<input type="text" id="myinput" onkeyup="filter()" placeholder="Search and click contact to add" name="search" autocomplete="off">
+						</div>
 						<!--<input type="submit" value="ADD" class="submit-btn">-->
 						<!--<span id="button" class="submit-btn" style="color:#1e824c;border:1px solid black;" onclick="slide()"><b>ADD</b></span>-->
-						<span id="button" class="submit-btn" style="color:#1e824c;border:1px solid black;" onclick="slide()"><b>DONE</b></span>
+						<span id="button" class="submit-btn" style="color:#1e824c;" onclick="slide()"><b>DONE</b></span>
 						<br>
 						<ul id="myUL">
   							<li><a id="1" onclick="changetext(1)"><img src="./images/profile.png" style="height:20px; width:20px;">  Adele Aaron</a></li>
@@ -82,7 +86,7 @@
 				</div>
 			</div>
   			<div class="content-container">
-    			<div class="form-container">
+    			<div id="form-container">
       				<form name="myForm" action="dashboard.html" onsubmit="return validateForm()" method="post">
         				<h1>
           					Create a New Group
@@ -124,3 +128,4 @@
 		</div>
 	</body>
 </html>
+

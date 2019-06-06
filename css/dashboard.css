@@ -76,7 +76,7 @@ group-card*/
 	display: block;
 	color: black;
 	background-color: white;
-	height: 15vw;
+	height: 17vw;
 	width: 83vw;
 	font-size: 1em;
 	padding-top: .8em;
@@ -104,10 +104,11 @@ group-card*/
 	padding:0;
 	margin-right: 4em;
 	padding-right: 2em;
-	width: 7em;
-	height: 6em;
+	width: 7.5em;
+	height: 7.5em;
 	margin:0;
 	display:inline-block;
+	margin-top: -.1em;
 }
 
 .avatar img{
@@ -118,8 +119,8 @@ group-card*/
     border: .05em solid rgba(136,136,136,0.50);
 }
 
-.user-name{
-	font-size:6em; 
+#user-name{
+	font-size:1.2em; 
 }
 
 
@@ -139,28 +140,35 @@ group-card*/
 
 
 #edit-profile{
-	margin-top: 1.3em;
+	margin-top: 2.45em;
 	margin-right: 0; 
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: lighter;
-	color: rgba(0, 100, 0,1); 
+	color: rgba(0, 100, 0,.7); 
 	vertical-align: middle;
-	padding-left: 1em;
+	padding-left: 0em;
+	padding-top: .2em;
 	font-size:1em;
 	transition: .3s;
+	margin-left: 2vw;
 }
 
 #edit-profile:hover{
 	text-shadow: .02em .02em  rgba(136,136,136,0.75); 
+	color: rgba(0, 100, 0,1); 
+
 }
 .user-handle{
 	margin-right: 0;
-	margin-left:22em;	
+	margin-left:16.5em;	
 }
+
+
+
+
 
 .user-identifiers{
 	font-family: Montserrat;
-	font-size:.7em;
+	font-size:.8em;
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
@@ -244,7 +252,7 @@ group-card*/
 	background-color: white;
 	cursor: pointer;
 	transition: .2s;
-	color:rgba(0,0,0,.80);
+	color:rgba(0,0,0,.7);
 	background-repeat: repeat-x repeat-y;
 
 }
@@ -254,6 +262,8 @@ group-card*/
 	text-shadow: .04em .04em rgba(136,136,136,0.75); 
 
 }
+
+
 
 .group-event-name{
 	width:40%;
@@ -276,26 +286,11 @@ group-card*/
 	padding-right: 0em;
 
 	margin-bottom: 0em;
-	margin-top:-1.4em;
+	margin-top:-2.3em;
 	margin-left: 9em;
 
 }
 
-
-
-.mail{
-	width: 25%;
-	height: 100%;
-	margin-left: 0;
-
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
-    border-radius: .8em;
-	border: .01em solid rgba(136,136,136,0.75);
-	transition: .3s;
-	cursor: pointer;
-	color:rgba(0,0,0,.85);;
-
-}
 
 .mail:hover, .contacts:hover, .alerrts:hover{
 	text-shadow: .03em .03em  rgba(136,136,136,0.75); 
@@ -303,17 +298,32 @@ group-card*/
 
 }
 
+.mail{
+	width: 25%;
+	height: 100%;
+	margin-left: 0;
+	padding:0;
+    border-radius: .8em;
+	border: .1em solid rgba(136,136,136,0.75);
+	transition: .3s;
+	cursor: pointer;
+	color:rgba(0,0,0,.7);;
+
+}
+
+
+
+
 .contacts{
 	width: 25%;
 	height: 100%;
 	margin-left: 9.9%;
 
     border-radius: .8em;
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
-	border: .01em solid rgba(136,136,136,0.75);
+	border: .1em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
-	color:rgba(0,0,0,.85);
+	color:rgba(0,0,0,.7);
 
 }
 
@@ -322,19 +332,16 @@ group-card*/
 	height: 100%;
 	margin-left: 9.9%;
 
-	box-shadow: inset 0em .0 .05em .05em rgba(136,136,136,0.75); 
     border-radius: .8em;
-	border: .01em solid rgba(136,136,136,0.75);
+	border: .1em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
-	color:rgba(0,0,0,.85);
+	color:rgba(0,0,0,.7);
 
 
 }
 
-.horiz-button-icon-body{
-    border-radius: .8em 0em 0em .8em;
-}
+
 
 
 .mail ion-icon{
@@ -366,6 +373,8 @@ group-card*/
 	text-align: center;
 	padding-bottom:2em;
 	padding-top: .8em;
+	padding-left: 0;
+	margin-left: 0;
 
 }
 
@@ -404,19 +413,21 @@ group-card*/
 
 }
 
-
+.horiz-button-icon-body{
+   border-radius: .68em 0 0 .68em;
+}
 
 .mail .horiz-button-icon-body{
 	height:100%;
 	width: 45%;
 	background-color:rgba(131,52,113,.95);
-
 	text-align: center;
+	margin-left: -.01em;
 }
 .contacts .horiz-button-icon-body{
 	height:100%;
 	width: 45%;
-	background-color:rgba(0, 100, 0,.89);
+	background-color:rgba(0, 100, 0,.96);
 	text-align: center;
 }
 
@@ -944,12 +955,15 @@ group-card*/
 	cursor: pointer;
 	background-color: white;
 	transition: .4s;
+	color:rgba(0,0,0,.7);
 }
 
 .share-event:hover{
 	text-shadow: .04em .03em  rgba(136,136,136,0.75); 
+	color:rgba(0,0,0,1);
 
 }
+
 
 /*When we want to blank out a button*/
 .share-event-blank{
@@ -1107,6 +1121,10 @@ group-card*/
 	font-size:.9vw;
 }
 
+.event-loc-addr{
+	font-size:.95vw;
+
+}
 .event-loc-title, .event-loc-addr{
 	color:rgba(0,0,0,0.80);
 
@@ -1189,7 +1207,7 @@ group-card*/
 	float: left;
 	color:black;
 	width:90%;
-	font-size: 1.1vw;
+	font-size: 1.5vw;
 	color:rgba(47,79,79,0.50);
 
 	/*text-align: center;*/
