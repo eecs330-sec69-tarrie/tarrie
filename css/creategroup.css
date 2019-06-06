@@ -245,7 +245,7 @@ input[type=file]:focus + label, input[type=file] + label:hover {
   overflow: hidden;
   overflow-x:hidden;
   position: absolute;
-  height:100vh;
+  height:50vw;
   transition: all 0.5s;
   background-color: #1e824c;
   /*position: absolute;
