@@ -1,18 +1,18 @@
 /*functions to make buttons reative*/
 function group_event_button_down(group_event){
 	if (group_event == 'group'){
-		document.getElementById("group-button-format").style.backgroundColor = "rgba(144, 165, 169, .2)";
+		document.getElementById("group-button").style.backgroundColor = "rgba(144, 165, 169, .2)";
 	}else{
-		document.getElementById("event-button-format").style.backgroundColor = "rgba(144, 165, 169, .2)";
+		document.getElementById("event-button").style.backgroundColor = "rgba(144, 165, 169, .2)";
 
 	}
 }
 
 function group_event_button_up(group_event){
 	if (group_event == 'group'){
-		document.getElementById("group-button-format").style.backgroundColor = "rgb(255,255,255)";
+		document.getElementById("group-button").style.backgroundColor = "rgb(255,255,255)";
 	}else{
-		document.getElementById("event-button-format").style.backgroundColor = "rgb(255,255,255)";
+		document.getElementById("event-button").style.backgroundColor = "rgb(255,255,255)";
 
 	}
 }
@@ -253,7 +253,7 @@ function initSampleEvents(){
 	eventLoc_dev2 = new EventLocation("2133 Sheridan Rd", "Evanston", "IL", "Ford ITW")
 	eventLoc_aepi1 = new EventLocation("24 S Michigan Ave", "Chicago", "IL", "The Gage") //networking w/ AEPI
 	eventLoc_cook1 = new EventLocation("2132 Noyes Rd", "Evanston", "IL", "Robbie's Apt") //Fried Chicken w/ Cookology
-	eventLoc_cs1 = new EventLocation("2311 N. Campus Drive, Suite 1400", "Evanston", "IL", "The Garage") // CS Faculty seminar
+	eventLoc_cs1 = new EventLocation("2311 N. Campus Drive", "Evanston", "IL", "The Garage (suite 1400)") // CS Faculty seminar
 	eventLoc_glac = new EventLocation("1999 Campus Dr", "Evanston", "IL", "Norris Center, 3rd Flr") // GLAC Diversity Coffee & Donuts
 	eventLoc_asa1 = new EventLocation("70 Arts Cir Dr", "Evanston", "IL", "The Lakefill") // ASA BBq
 	eventLoc_phd1 = new EventLocation("1937 Sheridan Rd", "Evanston", "IL", "Deering Meadow")// Phd: World Cup
@@ -263,15 +263,15 @@ function initSampleEvents(){
 	eventLoc_glac3 = new EventLocation("2145 Sheridan Rd", "Evanston", "IL", "Tech L150")// Workshop: Fellowship and Grant Writing 
 	eventLoc_glac4 = new EventLocation("1635 Chicago Avenue ", "Evanston", "IL", "Prairie Moon Evanston") // happy hour
    
-	eventMeta_dev1 = new EventMetaData("Skyrocket Design-A-Thon", imgPath+"design-a-thon.jpeg", imgType.IMG, getRandomInt(50)) 
+	eventMeta_dev1 = new EventMetaData("Skyrocket Design-A-Thon", imgPath+"rocket_design.jpg", imgType.IMG, getRandomInt(50)) 
 	eventMeta_dev2 = new EventMetaData(".Develop Project Showcase", imgPath+"devShowcase.png", imgType.IMG, getRandomInt(50)) 
-	eventMeta_aepi1 = new EventMetaData("AE&pi; Alumni Networking", imgPath+"networking.jpeg", imgType.IMG, getRandomInt(150))  //networking w/ AEPI
-	eventMeta_cook1 = new EventMetaData("Gourmet Fried Chicken Class", imgPath+"friedChicken.jpg", imgType.IMG, getRandomInt(30))  //Fried Chicken w/ Cookology
+	eventMeta_aepi1 = new EventMetaData("AEPI Alumni Networking", imgPath+"networking.jpeg", imgType.IMG, getRandomInt(150))  //networking w/ AEPI
+	eventMeta_cook1 = new EventMetaData("Chick-fil-a from Scratch", imgPath+"fried.jpg", imgType.IMG, getRandomInt(30))  //Fried Chicken w/ Cookology
 	eventMeta_cs1 = new EventMetaData("Seminar: Machine Learning", imgPath+"seminar.png", imgType.IMG, getRandomInt(50))  // CS Faculty seminar
 	eventMeta_glac = new EventMetaData("GLAC Diversity Coffee & Donuts", imgPath+"donuts.jpeg", imgType.IMG, getRandomInt(80))  // GLAC Diversity Coffee & Donuts
 	eventMeta_asa1 = new EventMetaData("NSBE Memorial Day BBQ", imgPath+"nsbbq.png", imgType.IMG, getRandomInt(100))  // ASA BBq
 	eventMeta_phd1 = new EventMetaData("NU World Cup: Cultural Event", imgPath+"worldCup.png", imgType.IMG, getRandomInt(80)) // Phd: World Cup
-	eventMeta_asa2 = new EventMetaData("Paradice on a Yacht", imgPath+"nsbe_yaht.JPG", imgType.IMG, getRandomInt(150))  // ASA: Yaht Part, no end Loc
+	eventMeta_asa2 = new EventMetaData("ParadICE on a Yacht", imgPath+"nsbe_yaht.JPG", imgType.IMG, getRandomInt(150))  // ASA: Yaht Part, no end Loc
 	eventMeta_glac2 = new EventMetaData("Workshop: Inventing Your Life", imgPath+"invention.jpg", imgType.IMG, getRandomInt(60))  // GLAC: Workshop: Inventing Your Life
 	eventMeta_64sq = new EventMetaData("Spring Chess Tourney", imgPath+"chess_game.jpeg", imgType.IMG, getRandomInt(35))  // Spring Chess Tourney
 	eventMeta_glac3 = new EventMetaData("Fellowship/Grant Workshop", imgPath+"fellowship.png", imgType.IMG, getRandomInt(35)) // Workshop: Fellowship and Grant Writing 
@@ -291,7 +291,7 @@ function initSampleEvents(){
 
 	eventLoc_cs2 = new EventLocation("1615 Chicago Ave", "Evanston", "IL", "Tapas Barcelona") // CS Faculty Social 
 	eventLoc_cook2 = new EventLocation("2110 Sheridan Rd", "Evanston", "IL", "Sheil Catholic Center") // Cookology: Baking Basics
-	eventLoc_aepi2 = new EventLocation("584 Lincoln St", "Evanston", "IL", "AE&pi;") // AEPI: Zeebras, Zees, and Zues
+	eventLoc_aepi2 = new EventLocation("584 Lincoln St", "Evanston", "IL", "AEPI Frat House") // AEPI: Zeebras, Zees, and Zues
 	eventLoc_cheese1 = new EventLocation("2145 Sheridan Rd", "Evanston", "IL", "Tech L241") // Cheese Club Study Table
 	eventLoc_asa3 = new EventLocation("2145 Sheridan Rd", "Evanston", "IL", "Tech L261")// ASA Study Table
 	eventLoc_OS1 = new EventLocation("2233 Sheridan Rd", "Evanston", "IL", "Mudd 2133") // CS343: Final Review
@@ -300,7 +300,7 @@ function initSampleEvents(){
 	eventLoc_glac5 = new EventLocation("2233 Tech Dr", "Evanston", "IL", "Mudd East (Collaboration Hub)") // End of Year: Ice Cream Social Soccer
 
 	eventMeta_cs2 = new EventMetaData("CS Faculty End-of-Year Social", imgPath+"dancing_80s.gif", imgType.GIF, getRandomInt(100)) // CS Faculty Social 
-	eventMeta_cook2 = new EventMetaData("Baking Basic Lessons", imgPath+"brownie.gif", imgType.GIF, getRandomInt(50)) // Cookology: Baking Basics
+	eventMeta_cook2 = new EventMetaData("Baking + Sweets Lessons", imgPath+"cupcake.gif", imgType.GIF, getRandomInt(50)) // Cookology: Baking Basics
 	eventMeta_aepi2 = new EventMetaData("Zeebras, Zeez, and Zues", imgPath+"zebra.gif", imgType.GIF, getRandomInt(300)) // AEPI: Zeebras, Zees, and Zues
 	eventMeta_cheese1 = new EventMetaData("Cheese Club Study Table", imgPath+"spongebob.gif", imgType.GIF, getRandomInt(30)) // Cheese Club Study Table
 	eventMeta_asa3 = new EventMetaData("ASA Study Table", imgPath+"rapper.gif", imgType.GIF, getRandomInt(30))// ASA Study Table
