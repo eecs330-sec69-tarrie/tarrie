@@ -31,10 +31,10 @@
 					<div id="user-name" style="text-align:left;">
 						<i>Becky Tousilienie</i>
 					</div>
-					<div style="font-size: .8em;text-align:left;">
-						10 posted events &#8226; following 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
+					<div style="font-size: .65em;text-align:left;">
+						10 posted events &#8226; subscribed to 10 groups &#8226; owner of 5 groups &#8226; admin of 2 groups
 					</div>
-					<hr style="margin-left:10%;margin-right:10%;">
+					<hr style="margin-left:10%;margin-right:10%;margin-bottom:.5em;">
 					
 					<span class="email-header"> email</span>
 					<span class="handle-header"> user name</span>
@@ -85,8 +85,8 @@
 
 				<div class="groupevent_button" style="display:inline-block;">
 					<!--Container to hold the button for creating a group  -->
-					<a href='creategroup.html' style="text-decoration:none;" onmousedown="group_event_button_down('group')" onmouseup="group_event_button_up('group')">
-						<div id="group-button" style="display:inline-block;">
+					<a href='creategroup.html' style="text-decoration:none;" >
+						<div id="group-button" style="display:inline-block;" onmousedown="group_event_button_down('group');" onmouseup="group_event_button_up('group')">
 							<ion-icon style="display:inline-block;" name="add"></ion-icon>
 							<span class="group-event-name"> Create Group</span>
 						</div>
@@ -107,7 +107,7 @@
 
 					<!-- The add and edit option -->
 					<div class= group-options>
-						<div class="group-edit">
+						<div class="group-edit" id="group-edit" onclick="slide_open()">
 							Edit
 						</div>
 						<h1 class="group-event-header-txt">Groups</h1>
@@ -123,8 +123,8 @@
 						 <div class="group-class-options"> 
 						 	<span class="category" id="all_groups" onClick="setCategory('all_groups')">All</span>
 						 	<span class="category" id="owner_admin" onClick="setCategory('owner_admin')">Owner+Admin</span>
+						 	<span class="category"  id="following" onClick="setCategory('following')">Subscribed</span>
 						 	<span class="category"  id="favorites" onClick="setCategory('favorites')">Favorities</span>
-						 	<span class="category"  id="following" onClick="setCategory('following')">Following</span>
 						 </div>
 
 						  <!--Search bar -->
@@ -354,19 +354,34 @@
 					 </div>
 
 
-					 <div class="group-add-body">
-						<div class="add-subsciption">
-						</div>
-						<div class="add-favorite">			
-						</div>
-						<div class="add-multigroup">
-							<div style="display:inline-block;"> 
-								Create Multigroup 
+					 <div id="group-add-body" class="group-add-body">
+					 	<!--
+					 	<div class="group-add-options">
+							<div class="add-favorite">				
+								<img class="add-fav-icon" style="height:80%;width:9%;float:left;" src="./images/star_green_outline.svg" alt="Fav">
+								<div class="add-fav-txt" style="display:inline-block;">  Add Favorite</div>
 							</div>
-							<p class="add-multigroup-descr" style="margin:0;padding:0;">
-							 	Organize multiple groups into a collection of groups
-							 </p>
+
+							<div class="add-subsciption">
+									<ion-icon name="heart-empty" style="float:left;"></ion-icon>
+									<div class="add-subscription-txt" style="float:left;"> Add Subscription </div> 
+							</div>
+
+							<div class="add-multigroup">
+								<div class="add-multigroup-txt" style="float:left;"> 
+									<ion-icon name="git-network" style="float:left;"></ion-icon>
+									Create Multigroup 
+									<p class="add-multigroup-descr" >
+									Organize multiple groups into a collection 
+									</p>
+								 </div>
+							</div>
 						</div>
+						<div class="group-add-cancel" onclick="slide_close()">
+							<div class="cancel-contain">
+								<b>Cancel</b>
+							</div>
+						</div> -->
 					</div>
 
 				</div>
@@ -377,7 +392,19 @@
 
 					<div class="group-event-header" id ="group-event-header">
 						<!--Text and clickable options that are underlined w/ green -->
-						 <h1 class="group-event-header-txt">Upcoming Events</h1>
+						 
+					<!-- The add and edit option -->
+					<div class= "group-options">
+						<div class="group-edit" >
+							Edit
+						</div>
+						<h1 class="group-event-header-txt" id="event-header-title" >Events </h1>
+						<div class="group-add">
+							<ion-icon  name="add"></ion-icon>
+						</div>
+					</div>
+
+
 						 <div class="group-class-options"> 
 						 	<span class="category" id="all_events" onClick="setCategory('all_events'); Gifffer();">All</span>
 						 	<span class="category" id="hosting" onClick="setCategory('hosting'); Gifffer();">Hosting</span>

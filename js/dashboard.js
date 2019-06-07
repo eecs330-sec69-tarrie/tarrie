@@ -1,3 +1,64 @@
+
+
+/***************** Functions for the add button ****************/
+var size = [window.width,window.height];
+group_add_text =`<div class="group-add-options">
+					<div class="add-favorite">				
+						<img class="add-fav-icon" style="height:80%;width:9%;float:left;" src="./images/star_green_outline.svg" alt="Fav">
+						<div class="add-fav-txt" style="display:inline-block;">  Add Favorite</div>
+					</div>
+
+					<div class="add-subsciption">
+							<ion-icon name="heart-empty" style="float:left;"></ion-icon>
+							<div class="add-subscription-txt" style="float:left;"> Add Subscription </div> 
+					</div>
+
+					<div class="add-multigroup">
+						<div class="add-multigroup-txt" style="float:left;"> 
+							<ion-icon name="git-network" style="float:left;"></ion-icon>
+							Create Multigroup 
+							<p class="add-multigroup-descr" >
+							Organize multiple groups into a collection of groups
+							</p>
+						 </div>
+					</div>
+				</div>
+				<div class="group-add-cancel" onclick="slide_close()">
+					<div class="cancel-contain">
+						<b>Cancel</b>
+					</div>
+				</div>`
+
+
+down=false; 
+function slide_open() {
+	if (down == false){
+		document.getElementById("group-add-body").style.marginTop='58vw';
+
+
+		setTimeout(function(){
+		document.getElementById("group-add-body").style.marginTop='38.3vw';
+		document.getElementById("group-add-body").style.height=' 17vw';
+		document.getElementById("group-add-body").innerHTML=group_add_text; 
+		document.getElementById("group-edit").style.cursor='default';
+		down = true;
+		}, 800);
+	}
+
+}
+
+function slide_close() {
+	document.getElementById("group-add-body").style.marginTop='58vw';
+	setTimeout(function(){
+		document.getElementById("group-add-body").style.height='0';
+		document.getElementById("group-add-body").innerHTML='';
+		document.getElementById("group-edit").style.cursor='pointer';
+		down=false;
+	}, 2000);
+}
+
+
+
 /*functions to make buttons reative*/
 function group_event_button_down(group_event){
 	if (group_event == 'group'){
