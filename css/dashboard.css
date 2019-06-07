@@ -440,6 +440,57 @@ group-card*/
 }
 
 
+/******************* Edit and Add button for the containers *********/
+
+/*Containter for the add and edit buttons*/
+.group-options{
+	border: solid 1px;
+	height: 5vw;
+	width: 100%;
+}
+
+.group-add{
+ float:right;
+ margin-top: -5vw;
+ cursor:pointer;
+
+}
+
+.group-add ion-icon{
+	font-size: 2.3vw;
+	color: rgba(46, 139, 87,1);
+}
+
+.group-edit{
+	float:left;
+	margin-right: 11.2vw;
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(46, 139, 87,1);
+	cursor:pointer;
+}
+
+.group-event-header-txt{
+	padding: 0; 
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+	letter-spacing: 0.05em;
+
+	margin-bottom: .25em;
+
+}
+
+
+.group-add-body{
+	z-index: 2;
+	margin-top: 50vh;
+	position: absolute;
+	border: solid 1px;
+	height: 40vh;
+	width: 38.5vw;
+	background: white;
+}
+
+
  /***********HEADER FOR THE CARDS***************/
 .groups-body{
 	/*Rounded Corners*/
@@ -513,16 +564,6 @@ group-card*/
 }
 
 
-.group-event-header-txt{
-	margin-top: 0px;
-	padding-top: .1em;
-	text-align: center; 
-	font-family: 'Open Sans', sans-serif;
-	letter-spacing: 0.05em;
-	padding-bottom: 0; 
-	margin-bottom: .25em;
-
-}
 
 
 
@@ -781,6 +822,8 @@ group-card*/
 	padding-bottom:  1em;
 
 	margin-left:.3vw;
+	position: relative;
+	z-index: 0; /*Z-index for overlapp*/
 }
 
 .group-card{
@@ -1117,7 +1160,7 @@ group-card*/
 .event-rsvps{
 	color:rgba(47,79,79,0.50);
 	font-style: italic;
-	margin-top:2px;
+	margin-top:.3vw;
 	font-size:.9vw;
 }
 
@@ -1219,24 +1262,7 @@ group-card*/
 /***********************/
 
 
-.manager{
-	vertical-align: middle;
-	margin-left:8%;
-	margin-right: 0;
-	width: 30%;
-	text-align: left;
-	padding-left: .4em;
-	border: 1px solid rgba(136,136,136,0.50); 
-	text-shadow: .03em .03em rgba(136,136,136,0.75);
 
-	border-radius: 4em 4em 4em 4em;
-	box-shadow: 0px .1em 0px 0px rgba(220,220,220,.5);
-	cursor: pointer; 
-	padding-bottom: .2em;
-	padding-top: .2em;
-	background-color: rgba(252, 252, 252,1);
-
-}
 
 .chat{
 	vertical-align: middle;

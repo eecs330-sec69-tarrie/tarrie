@@ -104,9 +104,22 @@
 
 				<!--Container to hold body for scrollanble group cards  -->
 				<div class="groups-body">
+
+					<!-- The add and edit option -->
+					<div class= group-options>
+						<div class="group-edit">
+							Edit
+						</div>
+						<h1 class="group-event-header-txt">Groups</h1>
+						<div class="group-add">
+							<ion-icon  name="add"></ion-icon>
+						</div>
+					</div>
+					
+
 					<div class="group-event-header" id ="group-event-header">
 						 <!--Text and clickable options that are underlined w/ green -->
-						 <h1 class="group-event-header-txt">Groups</h1>
+						 
 						 <div class="group-class-options"> 
 						 	<span class="category" id="all_groups" onClick="setCategory('all_groups')">All</span>
 						 	<span class="category" id="owner_admin" onClick="setCategory('owner_admin')">Owner+Admin</span>
@@ -301,7 +314,7 @@
 													Northwestern's Software Development Club
 												</div>
 												<div class="group-loc">
-													<span class>
+													<span >
 														Evanston &#183; IL  &#183; USA
 													</span>
 												</div>	
@@ -339,6 +352,23 @@
 						 	</div>
 						</div>
 					 </div>
+
+
+					 <div class="group-add-body">
+						<div class="add-subsciption">
+						</div>
+						<div class="add-favorite">			
+						</div>
+						<div class="add-multigroup">
+							<div style="display:inline-block;"> 
+								Create Multigroup 
+							</div>
+							<p class="add-multigroup-descr" style="margin:0;padding:0;">
+							 	Organize multiple groups into a collection of groups
+							 </p>
+						</div>
+					</div>
+
 				</div>
 
 
@@ -513,6 +543,7 @@
 							</div>
 						</div>
 					</div>
+
 
 				</div>
 
