@@ -298,7 +298,7 @@ group-card*/
 	border: .01em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
-	color:rgba(0,0,0,.85);;
+	color:rgba(0,0,0,.6);;
 
 }
 
@@ -318,7 +318,7 @@ group-card*/
 	border: .01em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
-	color:rgba(0,0,0,.85);
+	color:rgba(0,0,0,.6);
 
 }
 
@@ -332,7 +332,7 @@ group-card*/
 	border: .01em solid rgba(136,136,136,0.75);
 	transition: .3s;
 	cursor: pointer;
-	color:rgba(0,0,0,.85);
+	color:rgba(0,0,0,.6);
 
 
 }
@@ -463,6 +463,11 @@ group-card*/
 		transition: .5s;
 
 }
+
+.group-edit:hover, .group-add:hover{
+	color: rgba(46, 139, 87,.8);
+}
+
 
 .group-event-header-txt{
 	padding: 0; 
