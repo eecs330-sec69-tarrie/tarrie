@@ -34,6 +34,7 @@ down=false;
 function slide_open() {
 	if (down == false){
 		document.getElementById("group-add-body").style.marginTop='58vw';
+		document.getElementById("group-edit").style.color='rgba(46, 139, 87,1)';
 
 
 		setTimeout(function(){
@@ -41,6 +42,7 @@ function slide_open() {
 		document.getElementById("group-add-body").style.height=' 17vw';
 		document.getElementById("group-add-body").innerHTML=group_add_text; 
 		document.getElementById("group-edit").style.cursor='default';
+
 		down = true;
 		}, 800);
 	}
@@ -49,6 +51,8 @@ function slide_open() {
 
 function slide_close() {
 	document.getElementById("group-add-body").style.marginTop='58vw';
+	document.getElementById("group-edit").style.color='rgba(46, 139, 87,.4)';
+
 	setTimeout(function(){
 		document.getElementById("group-add-body").style.height='0';
 		document.getElementById("group-add-body").innerHTML='';
