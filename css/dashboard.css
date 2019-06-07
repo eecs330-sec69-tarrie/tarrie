@@ -446,17 +446,22 @@ group-card*/
  float:right;
  margin-top: -5vw;
  cursor:pointer;
-color: rgba(46, 139, 87,1);
+	color: rgba(46, 139, 87,.4);
+	transition: .5s;
+
 }
+
 
 
 .group-edit{
 	float:left;
 	margin-right: 11.2vw;
 	font-family: 'Open Sans', sans-serif;
-	color: rgba(46, 139, 87,1);
+	color: rgba(46, 139, 87,.4);
 	cursor:pointer;
 	font-size: 1.2em;
+		transition: .5s;
+
 }
 
 .group-event-header-txt{
