@@ -34,7 +34,7 @@ down=false;
 function slide_open() {
 	if (down == false){
 		document.getElementById("group-add-body").style.marginTop='58vw';
-		document.getElementById("group-edit").style.color='rgba(46, 139, 87,1)';
+		document.getElementById("group-edit").style.color='rgba(0, 100, 0,1)';
 
 
 		setTimeout(function(){
@@ -44,21 +44,22 @@ function slide_open() {
 		document.getElementById("group-edit").style.cursor='default';
 
 		down = true;
-		}, 800);
+		}, 200);
 	}
 
 }
 
 function slide_close() {
 	document.getElementById("group-add-body").style.marginTop='58vw';
-	document.getElementById("group-edit").style.color='rgba(46, 139, 87,.4)';
+	document.getElementById("group-edit").style.color='rgba(0, 100, 0,.4)';
+	document.getElementById("group-edit").style.cursor='pointer';
 
 	setTimeout(function(){
 		document.getElementById("group-add-body").style.height='0';
 		document.getElementById("group-add-body").innerHTML='';
-		document.getElementById("group-edit").style.cursor='pointer';
+		
 		down=false;
-	}, 2000);
+	}, 200);
 }
 
 
