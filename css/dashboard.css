@@ -446,7 +446,7 @@ group-card*/
  float:right;
  margin-top: -5vw;
  cursor:pointer;
-	color: rgba(46, 139, 87,.4);
+	color: rgba(0, 100, 0,.4);
 	transition: .5s;
 
 }
@@ -457,7 +457,7 @@ group-card*/
 	float:left;
 	margin-right: 11.2vw;
 	font-family: 'Open Sans', sans-serif;
-	color: rgba(46, 139, 87,.4);
+	color: rgba(0, 100, 0,.4);
 	cursor:pointer;
 	font-size: 1.2em;
 		transition: .5s;
@@ -465,7 +465,7 @@ group-card*/
 }
 
 .group-edit:hover, .group-add:hover{
-	color: rgba(46, 139, 87,.8);
+	color: rgba(0, 100, 0,.8);
 }
 
 
@@ -494,7 +494,7 @@ group-card*/
 	margin-top: 38.3vw;
 	font-size: 1.8vw;
 	font-family: 'Open Sans', sans-serif;
-	transition: margin 2s;
+	transition: margin .5s;
 	transition: height 0;
 }
 
